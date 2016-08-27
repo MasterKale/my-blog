@@ -1,0 +1,16 @@
+before_script:
+  - wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux-64bit.tgz
+  - echo "37ee91ab3469afbf7602a091d466dfa5  hugo_0.16_linux-64bit.tgz" | md5sum -c
+  - tar xf hugo_0.16_linux-64bit.tgz && cp ./hugo /usr/bin
+  - hugo version
+
+push_to_do:
+  only:
+    - master
+  script:
+    - hugo
+    - mkdir -p /var/www/.blog.iammiller.com
+    - cp -r public/* /var/www/.blog.iammiller.com
+    - cd /var/www/
+    - rm -rf blog.iammiller.com
+    - mv .blog.iammiller.com blog.iammiller.com
