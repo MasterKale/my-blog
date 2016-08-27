@@ -1,6 +1,6 @@
 +++
 title = "About"
-menu = "main"
+# menu = "main"
 +++
 
 A simple About page
