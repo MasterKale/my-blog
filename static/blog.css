@@ -19,3 +19,7 @@
 .post-date {
 	color: #333;
 }
+
+.post img {
+	border: 1px solid #333;
+}

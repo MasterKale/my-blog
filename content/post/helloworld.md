@@ -1,8 +1,9 @@
 +++
 title = "Well hello there!"
 date = "2016-08-26T21:00:00-07:00"
-categories = ['hello', 'world']
 description = "\"Start a blog,\" they said. \"It might eventually lend credibility,\" they said..."
+categories = ['misc']
+tags = ['Python', 'Hugo', 'GitLab', 'DO']
 
 +++
 

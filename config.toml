@@ -14,12 +14,15 @@ paginate = 10
 [taxonomies]
     # Optional. Use if you want tags and lists.
     category = "categories"
+    tag = "tags"
 
 [params]
     # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
     theme = "theme-base-0b"
     tagline = "Oh man, how did I do that before...?"
     customCSS = "/blog.css"
+
+    highlight = "tomorrow-night"
 
     # Metadata used to drive integrations.
     googleAnalytics = "UA-75801445-2"
@@ -31,3 +34,5 @@ paginate = 10
 
     # Enable a good ol' RSS feed
     rss = true
+
+    defaultKeywords = 'python,programming,coding'
