@@ -1,5 +1,5 @@
 +++
-categories = ['howto']
+categories = ['howto', 'django']
 date = "2016-09-01T19:00:00-07:00"
 description = "There's a reliable way to test out Django's localizations thanks to Chrome."
 tags = ['django', 'localization', 'internationalization', 'chrome']
