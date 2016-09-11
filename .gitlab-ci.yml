@@ -12,5 +12,3 @@ push_to_do:
     - mkdir -p /var/www/.blog.iammiller.com
     - cp -r public/* /var/www/.blog.iammiller.com
     - cd /var/www/
-    - rm -rf blog.iammiller.com
-    - mv .blog.iammiller.com blog.iammiller.com
