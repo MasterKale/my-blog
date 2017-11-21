@@ -17,9 +17,10 @@ paginate = 10
     tag = "tags"
 
 [params]
+    home = "Home"
     # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
     theme = "theme-base-0b"
-    tagline = "Oh man, how did I do that before...?"
+    tagline = "Notes for my future self"
     customCSS = "/blog.css"
 
     highlight = "tomorrow-night"
@@ -35,4 +36,10 @@ paginate = 10
     # Enable a good ol' RSS feed
     rss = true
 
-    defaultKeywords = 'python,programming,coding'
+    defaultKeywords = 'python,javascript,programming,coding'
+
+[[menu.main]]
+    name = "Categories"
+    identifier = "categories"
+    url = "/categories/"
+    weight = 100

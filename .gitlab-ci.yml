@@ -1,7 +1,7 @@
 before_script:
-  - wget https://github.com/spf13/hugo/releases/download/v0.16/hugo_0.16_linux-64bit.tgz
-  - echo "37ee91ab3469afbf7602a091d466dfa5  hugo_0.16_linux-64bit.tgz" | md5sum -c
-  - tar xf hugo_0.16_linux-64bit.tgz
+  - wget https://github.com/gohugoio/hugo/releases/download/v0.31/hugo_0.31_Linux-64bit.tar.gz
+  - echo "1f757f65796aeaa01d5121aa66388f1c  hugo_0.31_Linux-64bit.tar.gz" | md5sum -c
+  - tar xf hugo_0.31_Linux-64bit.tar.gz
   - ./hugo version
 
 push_to_do:
