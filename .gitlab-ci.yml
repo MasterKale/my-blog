@@ -6,6 +6,8 @@ stages:
 
 build:
   stage: build
+  tags:
+    - docker
   only:
     - master
   script:
@@ -16,6 +18,8 @@ build:
 
 deploy_production:
   stage: deploy
+  tags:
+    - iammiller
   only:
     - master
   environment:
