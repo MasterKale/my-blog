@@ -1,14 +1,27 @@
-before_script:
-  - wget https://github.com/gohugoio/hugo/releases/download/v0.36.1/hugo_0.36.1_Linux-64bit.tar.gz
-  - echo "640d9be133d0ea7caa617727df7565bb hugo_0.36.1_Linux-64bit.tar.gz" | md5sum -c
-  - tar xf hugo_0.36.1_Linux-64bit.tar.gz
-  - ./hugo version
+image: monachus/hugo:v0.36.1
 
-push_to_do:
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
   only:
     - master
   script:
-    - ./hugo
+    - hugo
+  artifacts:
+    paths:
+      - public
+
+deploy_production:
+  stage: deploy
+  only:
+    - master
+  environment:
+    name: "Digital Ocean - Objective Coding"
+    url: https://blog.iammiller.com
+  script:
     - mkdir -p /var/www/.blog.iammiller.com
     - cp -r public/* /var/www/.blog.iammiller.com
     - cd /var/www/
