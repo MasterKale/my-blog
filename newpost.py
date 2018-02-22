@@ -24,19 +24,22 @@ args = parser.parse_args()
 Construct a filename from the title
 """
 # Join all of the words together with dashes in between
-joined_filename = '-'.join(args.title)
+joined_filename = "-".join(args.title)
 # Specify the file name including extension
-filename = '{}.md'.format(joined_filename.lower())
+filename = "{}.md".format(joined_filename.lower())
+# Use spaces for the actual post title
+title = ' '.join(args.title)
 
 """
 Prepare the date variables for the path
 """
 today = date.today()
-# Create the path as "2018/February"
-path = today.strftime('%Y/%B')
+# Create the path as "post/2018/February"
+path = today.strftime("post/%Y/%B")
 
 """
 Execute the Hugo command
 """
-# Final command: hugo new post/2018/February/a-new-post.md
-os.system('hugo new post/{}/{}'.format(path, filename))
+# Final command: hugo new post/2018/February/a-new-post.md --editor code
+# The exported TITLE gets picked up in the default.md archetype with the `getenv` template function
+os.system("export TITLE=\"{}\"; hugo new {}/{} --editor code".format(title, path, filename))
