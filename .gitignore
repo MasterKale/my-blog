@@ -1,3 +1,4 @@
 *.exe
 dev/
 public/
+hugo
