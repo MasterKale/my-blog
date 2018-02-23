@@ -6,13 +6,13 @@ tags = ['django', 'rest', 'framework']
 title = "Django Notes: Part 1"
 
 +++
-I spent the better part of Saturday working on my latest personal project. Things were going alright within the limitations of using Django for routing and page rendering. I occassionally rued my decision to eschew Angular for a traditional Django app, but I forced myself to adapt and was making good progress.
+I spent the better part of Saturday working on my latest personal project. Things were going alright within the limitations of using Django for routing and page rendering. I occasionally rued my decision to eschew Angular for a traditional Django app, but I forced myself to adapt and was making good progress.
 
 Things took a turn for the interesting, though, when a good friend of mine clued me in on how I might implement a kind of "[isomorphic](http://isomorphic.net/)" website. That is, how to prepare an initial JSON payload on the server and inject it into the page in a way that allows for it to be displayed via Javascript after the page is loaded. As an added bonus, page content could be refreshed afterwards with simple AJAX calls to REST API endpoints exposing the very same class used to generate the initial JSON payload.
 
 It sounds a little unorthodox, but the end goal is that your pages won't experience two loads: the first one when the server delivers the initial HTML, JS, and CSS, and the second as the SPA framework bootstraps itself.
 
-The trick, I've found, is that you need to first set up a ViewSet to simplify the process of generating and returning JSON suitable for injection into `<script></script>` tags within a template. I've had initial success implementing one fairly cleanly with [Django Rest Framework](http://www.django-rest-framework.org/)'s (DRF) [ModelViewSet](http://www.django-rest-framework.org/api-guide/viewsets/#modelviewset), as well as a few [ModelSerializers](http://www.django-rest-framework.org/api-guide/serializers/#modelserializer) to help turn model instances into JSON. Once everything is in place, the real magic comes from calling the ViewSet programatically to get back JSON:
+The trick, I've found, is that you need to first set up a ViewSet to simplify the process of generating and returning JSON suitable for injection into `<script></script>` tags within a template. I've had initial success implementing one fairly cleanly with [Django Rest Framework](http://www.django-rest-framework.org/)'s (DRF) [ModelViewSet](http://www.django-rest-framework.org/api-guide/viewsets/#modelviewset), as well as a few [ModelSerializers](http://www.django-rest-framework.org/api-guide/serializers/#modelserializer) to help turn model instances into JSON. Once everything is in place, the real magic comes from calling the ViewSet programmatically to get back JSON:
 
 	# CustomViewSet inherits rest_framework.viewsets.ModelViewSet
 	final_json = CustomViewSet.as_view({'get': 'list'})(request).render().content
@@ -50,4 +50,4 @@ There's one more thing worth mentioning: AJAX calls made via Javascript will aut
 	    )
 	}
 
-I have to admit, I have a newfound respect for Django and Django Rest Framework. With minimal changes to my existing codebase, I was able to create an almost "Angular-lite" type of webpage that avoids the issues of a long bootstraping process that's indicative of an SPA. And hey, if this general technique is good enough for Twitter, then it's good enough for me!
+I have to admit, I have a newfound respect for Django and Django Rest Framework. With minimal changes to my existing codebase, I was able to create an almost "Angular-lite" type of webpage that avoids the issues of a long bootstrapping process that's indicative of an SPA. And hey, if this general technique is good enough for Twitter, then it's good enough for me!
