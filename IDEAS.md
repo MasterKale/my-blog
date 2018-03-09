@@ -9,3 +9,15 @@
   - Build with shared runner, deploy with private runner (specify which using tags)
   - Make sure to set artifact property on build job, will download artifact to private runner
     before running deploy script
+- Writing vue-router route guards that depend on app state located within a Vuex store
+  - Just `import store from '@/store;' as usual and access the store from within guard methods!
+- Autofocus inputs on page load in VueJS
+  - use `mounted()` lifecycle method and a `ref=""` attribute:
+  ```
+  <input type="text" ref="usernameEntry">
+
+  mounted() {
+    // This will autofocus the input when the component is displayed
+    this.$refs.usernameEntry.focus();
+  }
+  ```
