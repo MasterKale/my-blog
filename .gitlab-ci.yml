@@ -1,33 +1,10 @@
-image: monachus/hugo:v0.36.1
+image: publysher/hugo
 
-stages:
-  - build
-  - deploy
-
-build:
-  stage: build
-  tags:
-    - shared
-  only:
-    - master
+pages:
   script:
-    - hugo
+  - hugo
   artifacts:
     paths:
-      - public
-
-deploy_production:
-  stage: deploy
-  tags:
-    - iammiller
+    - public
   only:
-    - master
-  environment:
-    name: "Digital Ocean - Objective Coding"
-    url: https://blog.iammiller.com
-  script:
-    - mkdir -p /var/www/.blog.iammiller.com
-    - cp -r public/* /var/www/.blog.iammiller.com
-    - cd /var/www/
-    - rm -rf blog.iammiller.com
-    - mv .blog.iammiller.com blog.iammiller.com
+  - master
