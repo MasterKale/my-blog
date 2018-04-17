@@ -1,4 +1,4 @@
-baseurl: "/"
+baseurl: ""
 languageCode: "en-us"
 title: "I Am Miller's Blog"
 theme: "hyde-x"
