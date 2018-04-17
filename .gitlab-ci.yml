@@ -1,3 +1,4 @@
+# Use Gitlab Pages to host this blog
 image: publysher/hugo
 
 pages:
