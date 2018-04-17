@@ -2,6 +2,8 @@
 image: publysher/hugo
 
 pages:
+  tags:
+    - shared
   script:
   - hugo
   artifacts:
