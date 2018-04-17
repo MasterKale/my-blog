@@ -3,11 +3,11 @@ image: publysher/hugo
 
 pages:
   tags:
-    - shared
+    - docker
   script:
-  - hugo
+    - hugo
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
+    - master
