@@ -16,7 +16,7 @@ When this happens, I do one of two things:
 If I'm initially cloning the repo down to my machine then I add `-c http.sslVerify=false` to my `git` command:
 
 ```sh
-git -c http.sslVerify=false clone https://git.customer.com/COMP/repo-name/
+git -c http.sslVerify=false clone https://git.foo.bar/FIZZ/repo-buzz/
 ```
 
 Afterwards I open up a cloned repository's **.git/config** file and add the following setting:
