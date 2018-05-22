@@ -1,4 +1,4 @@
-baseurl: "https://blog.iammiller.com"
+baseurl: "https://blog.millerti.me"
 languageCode: "en-us"
 title: "I Am Miller's Blog"
 theme: "hyde-x"
@@ -28,6 +28,9 @@ params:
   # Metadata used to drive integrations.
   googleAnalytics: "UA-75801445-2"
   gravatarHash: "50bcabd848a0f4072d21f3c75fb14dc8"
+
+  # URL to my homepage
+  personalSiteURL: "https://millerti.me"
 
   # Social Links
   github: "https://github.com/MasterKale/"
