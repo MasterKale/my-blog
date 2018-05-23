@@ -12,19 +12,24 @@ collections:
     # Used in routes, e.g., /admin/collections/blog
   - name: "post"
     # What to call items in the CMS
-    label: "Post"
+    label: "Posts"
+    label_singular: "Post"
     # Where to store posts (relative to the project root)
     folder: "content/post"
     # Allow for posts to be created in the CMS
     create: true
-    # Where to store each post
-    slug: "{{year}}/{{month}}/{{day}}/{{slug}}"
+    # The full slug for use when linking to the post
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    # Save posts with .md extension
+    extension: "md"
+    # Use TOML frontmatter (delimiter: +++)
+    format: "toml-frontmatter"
     # Post frontmatter
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
-      - {label: "Post Categories", name: "categories", widget: "list", default: []}
-      - {label: "Metatags", name: "tags", widget: "list", default: []}
+      - {label: "Post Categories (comma-separated)", name: "categories", widget: "list", default: []}
+      - {label: "Metatags (comma-separated)", name: "tags", widget: "list", default: []}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
