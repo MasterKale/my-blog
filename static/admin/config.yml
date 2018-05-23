@@ -22,8 +22,9 @@ collections:
     # Post frontmatter
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Post Categories", name: "categories", widget: "list", default: []}
       - {label: "Metatags", name: "tags", widget: "list", default: []}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
+      - {label: "Body", name: "body", widget: "markdown"}
