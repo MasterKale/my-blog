@@ -18,7 +18,7 @@ collections:
     folder: "content/post"
     # Allow for posts to be created in the CMS
     create: true
-    # The full slug for use when linking to the post
+    # The filename slug to use when saving posts
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     # Save posts with .md extension
     extension: "md"
