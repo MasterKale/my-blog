@@ -27,27 +27,27 @@ Upon further investigation, I identified a _second_ instance of this file in ano
 
 Removing these files from the commit history turned into a three-step process:
 
-1. **Remove the files with `git-filter-branch`:**
+**1. Remove the files with `git-filter-branch`:**
 
 
-```
+```sh
 $> git filter-branch -f --index-filter "git rm --cached --ignore-unmatch static/images.zip" -- --all
 $> git filter-branch -f --index-filter "git rm --cached --ignore-unmatch source-code/static/images.zip" -- --all`
 ```
 
 The **static/images.zip** and **source-code/static/images.zip** paths were pulled from the commits where these files were introduced. This command completely removes these files from their respective commits, as though they never existed in the first place.
 
-2. **Remove the original commit IDs:**
+**2. Remove the original commit IDs:**
 
 
-```
+```sh
 $> rm -rf .git/refs/original/
 ```
 
-3. **Recalculate commit IDs and clean up the repo:**
+**3. Recalculate commit IDs and clean up the repo:**
 
 
-```
+```sh
 $> git reflog expire --expire=now --all
 $> git gc --prune=now --aggressive
 ```
