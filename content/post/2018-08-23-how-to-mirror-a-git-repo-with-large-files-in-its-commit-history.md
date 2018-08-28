@@ -32,7 +32,7 @@ Removing these files from the commit history turned into a three-step process:
 
 ```sh
 $> git filter-branch -f --index-filter "git rm --cached --ignore-unmatch static/images.zip" -- --all
-$> git filter-branch -f --index-filter "git rm --cached --ignore-unmatch source-code/static/images.zip" -- --all`
+$> git filter-branch -f --index-filter "git rm --cached --ignore-unmatch source-code/static/images.zip" -- --all
 ```
 
 The **static/images.zip** and **source-code/static/images.zip** paths were pulled from the commits where these files were introduced. This command completely removes these files from their respective commits, as though they never existed in the first place.
