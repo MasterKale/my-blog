@@ -3,7 +3,7 @@ title = "Using Cloudflare SSL Certificates with your Netlify Site"
 date = 2018-05-22T20:10:15-07:00
 description = "The missing piece of Cloudflare's origin certificates, needed when securing your Netlify site's custom domain with SSL."
 categories = ["netlify", "howto"]
-tags = ["ssl", "netlify", "cloudflare"]
+keywords = ["ssl", "netlify", "cloudflare"]
 draft = true
 +++
 

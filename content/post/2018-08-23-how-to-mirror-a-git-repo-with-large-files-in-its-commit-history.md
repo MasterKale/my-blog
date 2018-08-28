@@ -3,7 +3,7 @@ title = "How to mirror a git repo with large files in its commit history"
 description = "For when Github's 100MB file size restriction bumps up against previously-committed files"
 date = "2018-08-28T10:00:00-07:00"
 categories = ["git", "howto"]
-tags = ["Github", "git"]
+keywords = ["Github", "git"]
 draft = false
 +++
 I was tasked at work recently with mirroring a client's codebase to our internal Github organization. Unfortunately, the initial clone of the repo from the customer's git server took a long time - a _suspiciously_ long time. I've developed a feel for cloning times after working with repos containing all manner of web applications, so right away the time it took to pull down the client's codebase felt "wrong". I immediately suspected that I'd run into issues pushing it up to Github.

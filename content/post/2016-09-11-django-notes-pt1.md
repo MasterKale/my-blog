@@ -2,7 +2,7 @@
 date = "2016-09-11T01:00:00-07:00"
 description = "In which I learn to preload JSON on the server to reduce page load times."
 categories = ['django']
-tags = ['django', 'rest', 'framework']
+keywords = ['django', 'rest', 'framework']
 title = "Django Notes: Part 1"
 
 +++

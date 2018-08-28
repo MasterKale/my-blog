@@ -3,7 +3,7 @@ title = "How to mirror a git repo with large files in its commit history, part 2
 description = "Using BFG Repo Cleaner to prune large files from a repo's commit history"
 date = "2018-08-28T10:47:32-07:00"
 categories = ["git", "howto"]
-tags = ["github", "git", "bfg repo cleaner"]
+keywords = ["github", "git", "bfg repo cleaner"]
 draft = true
 +++
 In an earlier post I used `git` to prune a couple of files larger than Github's filesize limite of 100MB from a repo's commit history.

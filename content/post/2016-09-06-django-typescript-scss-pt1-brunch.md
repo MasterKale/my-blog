@@ -2,7 +2,7 @@
 date = "2016-09-06T19:00:00-07:00"
 description = "For when you absolutely, positively cannot live without TypeScript and SASS (and I don't blame you!)"
 categories = ['howto', 'django']
-tags = ['django', 'typescript', 'sass', 'scss', 'brunch.io']
+keywords = ['django', 'typescript', 'sass', 'scss', 'brunch.io']
 title = "Django, TypeScript and SCSS, Part 1: Brunch.io"
 
 +++

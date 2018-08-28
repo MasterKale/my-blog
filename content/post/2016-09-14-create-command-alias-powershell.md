@@ -3,7 +3,7 @@ title = "Creating Command Aliases in PowerShell"
 date = "2016-09-14T09:00:00-07:00"
 description = "Figuring out the Windows equivalent to ~/.bash_aliases"
 categories = ['howto', 'powershell']
-tags = ['powershell', 'command', 'alias', '.bash_aliases']
+keywords = ['powershell', 'command', 'alias', '.bash_aliases']
 
 +++
 

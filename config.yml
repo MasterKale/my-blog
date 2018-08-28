@@ -11,6 +11,8 @@ author:
 permalinks:
   post: "/:year/:month/:day/:title/"
 
+rssLink: "index.xml"
+
 taxonomies:
   # Optional. Use if you want tags and lists.
   category: "categories"

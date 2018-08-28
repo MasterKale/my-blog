@@ -2,7 +2,7 @@
 title = "Ignoring Self-Signed SSL Certificate Errors while using Git"
 date = 2018-04-19T10:43:11-07:00
 description = "How to get Git to play along with self-managed Git servers"
-tags = ["git", "ssl", "sslVerify"]
+keywords = ["git", "ssl", "sslVerify"]
 categories = ["git"]
 +++
 When I interact with most code repositories they're often hosted on Github, or Gitlab, or some other managed Git service. By and large HTTPS support is a foregone conclusion; I never have issues using `git` commands or GUI clients to interact with those repositories.

@@ -3,7 +3,7 @@ title = "Skipping CI Jobs on GitLab"
 date = 2018-02-22T08:35:17-08:00
 description = "tl;dr: Add [skip ci] to your commit messages"
 categories = ['howto', 'gitlab']
-tags = ['gitlab', 'continuous integration', 'ci']
+keywords = ['gitlab', 'continuous integration', 'ci']
 +++
 
 In the last year or so I've earnestly incorporated Continuous Integration (CI) pipelines into a couple of projects to automate the testing, building, and deployment of various sites and packages. My personal projects have yet to achieve critical mass and so thus far I've been able to get by with GitLab's free tier. The most "onerous" restriction of this tier is that it includes a finite amount of pipeline execution time that resets on a monthly basis.
