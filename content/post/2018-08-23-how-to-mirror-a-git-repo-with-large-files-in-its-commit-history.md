@@ -1,14 +1,14 @@
 +++
 title = "How to mirror a git repo with large files in its commit history"
-description = "For when Github's 100MB file size restriction bumps up against previous bad decisions"
-date = "2018-08-23T16:43:06-07:00"
+description = "For when Github's 100MB file size restriction bumps up against previously-committed files"
+date = "2018-08-28T10:00:00-07:00"
 categories = ["git", "howto"]
-tags = ["Github", "macOS"]
-draft = true
+tags = ["Github", "git"]
+draft = false
 +++
-I was recently tasked with mirroring a client's git repo to our company's Github organization. The initial clone of the repo from the customer's git server took a suspiciously long time, so right off the bat I suspected that I'd run into issues pushing it up to Github.
+I was tasked at work recently with mirroring a client's codebase to our internal Github organization. Unfortunately, the initial clone of the repo from the customer's git server took a long time - a _suspiciously_ long time. I've developed a feel for cloning times after working with repos containing all manner of web applications, so right away the time it took to pull down the client's codebase felt "wrong". I immediately suspected that I'd run into issues pushing it up to Github.
 
-Sure enough, when I attempted to push it all up to our repo, the process eventually errored out with a message like this:
+Sure enough, when I attempted to push the master branch up to our repo, the process eventually errored out with a message like this:
 
 ```sh
 remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
@@ -21,50 +21,41 @@ To https://github.com/ourcompany/project-name.git
 error: failed to push some refs to 'https://MasterKale@github.com/ourcompany/project-name.git'
 ```
 
-Frustratingly, **images.zip** didn't exist in HEAD because they were deleted in a separate commit several days after they had been initially committed. Despite that, they still existed in the repo's commit history, and thus had to be purged.
+What's this? **A 436MB ZIP file?** No wonder it felt slow!
 
-After some digging, I initially attempted to remove these files with a call to `git-filter-branch` followed by a `git gc` command or two. The files persisted.
+Upon further investigation, I identified a _second_ instance of this file in another commit! Together, **these two files added up to over 800MB of data** that needed to get pulled down any time the repo was cloned, despite the fact that they existed only in the repo's commit history (neither of these files existed in HEAD when it finished cloning - both were removed within a week of their introduction).
 
-What ended up working for me was a program called [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)! It's a JAR file you can execute with a couple of flags to replace these large files with empty placeholders while preserving commit IDs and the overall history of the repo.
+Removing these files from the commit history turned into a three-step process:
 
-To install BFG on macOS High Sierra, I installed Java using Homebrew:
+1. **Remove the files with `git-filter-branch`:**
 
-```sh
-$> brew cask install java
+
+```
+$> git filter-branch -f --index-filter "git rm --cached --ignore-unmatch static/images.zip" -- --all
+$> git filter-branch -f --index-filter "git rm --cached --ignore-unmatch source-code/static/images.zip" -- --all`
 ```
 
-Once Java finished installing, I [downloaded the latest version](http://repo1.maven.org/maven2/com/madgag/bfg/) (**v1.13.0** as of writing this) and dropped it in the root folder of the problematic repo (at the same level as the **.git/** directory.)
+The **static/images.zip** and **source-code/static/images.zip** paths were pulled from the commits where these files were introduced. This command completely removes these files from their respective commits, as though they never existed in the first place.
 
-Running BFG was pretty simple. I used the flag that told it to prune any file larger than 100M:
+2. **Remove the original commit IDs:**
 
-```sh
-$> java -jar bfg-1.13.0.jar --strip-blobs-bigger-than 100M .git
+
+```
+$> rm -rf .git/refs/original/
 ```
 
-In seconds, BFG crawled through all commits leading up to HEAD and replaced any blob larger than 100M with a tiny plaintext file containing the git hash of the file itself:
+3. **Recalculate commit IDs and clean up the repo:**
 
-![Showing off BFG's file replacement of large files](/images/screen-shot-2018-08-23-at-5.03.48-pm.png)
 
-**Warning:** BFG will tell you to run \`git reflog expire --expire=now --all && git gc --prune=now --aggress\` afterwards. **DON'T DO THIS! **This will recreate _all_ commit IDs, making it impossible for the two repos to mirror each other since none of the commits will line up!
-
-Instead, to finish things up I ran just the garbage collection command:
-
-```sh
+```
+$> git reflog expire --expire=now --all
 $> git gc --prune=now --aggressive
 ```
 
-Once that finished, a push up to our Github repo succeeded just fine:
+When all was said and done, the repo dropped from almost 1GB to a paltry 50MB. And of course, without any files larger than 100MB in its commit history, the repo pushed up to Github just fine.
 
-```sh
-$> git push ourcompany master
-Counting objects: 5130, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (1442/1442), done.
-Writing objects: 100% (5130/5130), 58.50 MiB | 1.66 MiB/s, done.
-Total 5130 (delta 3120), reused 5122 (delta 3116)
-remote: Resolving deltas: 100% (3120/3120), done.
-To https://github.com/ourcompany/project-name.git
- * [new branch]      master -> master
-```
+**Unfortunately, this is not a true mirror!**
 
-That's quite an improvement! From here on, we could commit and push to either remote without issue. Additionally, our devs can clone our copy of the repo in a fraction of the time 😉
+Try as I might, I could not identify a way to remove the ZIP files while preserving the existing commit IDs. As such, the last step in this process was to reach out to the client with a proposal that included us force-pushing over their master branch with our pruned version. It's a bit of an extreme solution, but due to the way Git works, there wasn't any other way.
+
+For a bit of closure, the client understood why this was necessary and allowed us to update their repo. We were able to proceed with maintenance work and periodically push to their remote server to keep the repos synced.
