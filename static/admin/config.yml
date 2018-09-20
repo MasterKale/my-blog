@@ -1,3 +1,5 @@
+display_url: https://blog.millerti.me
+
 backend:
   name: git-gateway
 
