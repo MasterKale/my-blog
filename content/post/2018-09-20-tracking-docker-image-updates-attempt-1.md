@@ -1,5 +1,5 @@
 +++
-title = "Tracking Docker Image Updates: Attempt #1"
+title = "Tracking Docker Image Updates: Attempt 1"
 description = "Let's try using Github's Atom feeds to track updates via RSS"
 date = 2018-09-21T00:10:10.566Z
 categories = ["docker"]
