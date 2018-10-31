@@ -49,12 +49,11 @@ Would you like us to install CPython 3.6.7 with pyenv? [Y/n]:
 In a perfect world we'd be able to give Homebrew a specific Python version as a flag at install time. For now, though, we can "settle" for the excellent interplay between Pipenv and pyenv!
 
 ----
+### Addendum:
 
 I ran into a curious issue on macOS 10.14 (Mojave) that prevented me from installing any version of Python through pyenv:
 
-```
-zipimport.ZipImportError: can't decompress data; zlib not available
-```
+> zipimport.ZipImportError: can't decompress data; zlib not available
 
 Further investigation dug up [an open issue on pyenv's Github repo](https://github.com/pyenv/pyenv/issues/1219) that reveals that [current versions of Xcode 10 no longer install headers](https://github.com/pyenv/pyenv/issues/1219#issuecomment-428700763) that pyenv relies on to build Python. 
 
