@@ -27,7 +27,6 @@ params:
   highlight: "tomorrow-night"
 
   # Metadata used to drive integrations.
-  googleAnalytics: "UA-75801445-2"
   gravatarHash: "50bcabd848a0f4072d21f3c75fb14dc8"
 
   # URL to my homepage
