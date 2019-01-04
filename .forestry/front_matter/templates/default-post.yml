@@ -1,0 +1,33 @@
+---
+label: Default Post
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  config:
+    date_format: MM/DD/YYYY
+    required: false
+  hidden: false
+- type: text
+  label: Description
+  name: description
+- type: list
+  label: Post Categories
+  name: categories
+  config:
+    use_select: false
+    source:
+      type: documents
+- type: list
+  label: Meta Keywords
+  name: keywords
+- type: boolean
+  name: draft
+  label: Draft
