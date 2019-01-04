@@ -14,6 +14,8 @@ sections:
   label: Post
   create: all
   match: "**/*"
+  templates:
+  - default-post
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''
