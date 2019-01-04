@@ -31,3 +31,5 @@ fields:
 - type: boolean
   name: draft
   label: Draft
+pages:
+- content/post/hello-from-forestry-io.md
