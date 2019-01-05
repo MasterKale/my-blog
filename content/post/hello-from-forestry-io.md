@@ -2,6 +2,7 @@
 categories = ["hugo", "JAMstack"]
 date = "2019-01-04T22:00:00+00:00"
 description = "A surprisingly compelling static site CMS"
+draft = true
 keywords = ["forestry.io", "cms", "static site"]
 title = "Hello from Forestry.io"
 
