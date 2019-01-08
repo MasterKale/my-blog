@@ -1,7 +1,7 @@
 +++
 title = "In which we manage multiple versions of Python on macOS"
 description = "Using Pipenv and pyenv to pick up where Homebrew leaves off"
-date = 2018-10-31T21:25:34.636Z
+date = "2018-10-31T21:25:34.636Z"
 categories = ["python", "howto"]
 keywords = ["python", "pipenv", "pyenv", "macos", "homebrew"]
 draft = false
