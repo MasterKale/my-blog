@@ -1,6 +1,6 @@
 +++
 categories = ["netlify", "howto"]
-date = "2019-01-20T14:00:00-08:00"
+date = "2019-01-20T10:00:00-08:00"
 description = "The third piece of the Cloudflare and Netlify SSL puzzle."
 keywords = ["ssl", "netlify", "cloudflare"]
 title = "Using Cloudflare SSL Certificates with your Netlify Site"
