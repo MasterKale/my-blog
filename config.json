@@ -1,0 +1,29 @@
+{
+  "baseURL": "https://blog.millerti.me",
+  "languageCode": "en-us",
+  "title": "It's Miller Time...for blogging!",
+  "theme": "kale2021",
+  "menu": {
+    "main": [
+      {
+        "name": "Home",
+        "url": "/",
+        "weight": 1
+      },
+      {
+        "name": "Posts",
+        "url": "/posts/",
+        "weight": 2
+      },
+      {
+        "name": "Personal Site",
+        "url": "https://millerti.me",
+        "weight": 3
+      }
+    ]
+  },
+  "permalinks": {
+    "post": "/:year/:month/:day/:title/"
+  },
+  "rssLink": "index.xml"
+}
