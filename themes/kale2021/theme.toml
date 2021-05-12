@@ -3,19 +3,13 @@
 
 name = "Kale2021"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
-min_version = "0.41.0"
+licenselink = ""
+description = "This is my theme. I made this. Circa 2021"
+homepage = "https://blog.millerti.me"
+tags = ["blog", "technical", "personal"]
+features = ["blog", "technical", "personal"]
+min_version = "0.83.1"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Matthew Miller"
+  homepage = "https://millerti.me"
