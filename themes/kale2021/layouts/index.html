@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <h2>Homepage</h2>
+  {{ $posts := where .Site.Pages "Kind" "page" }}
+  {{ range .Pages.ByPublishDate.Reverse }}
+    <p>
+      <h3><a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a></h3>
+      {{ partial "metadata.html" . }}
+      <a href="{{ .RelPermalink }}" class="summary">
+        <p>{{ .Summary }}</p>
+      </a>
+    </p>
+  {{end }}
+{{ end }}
