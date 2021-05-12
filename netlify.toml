@@ -1,6 +1,6 @@
 [build]
 publish = "public/"
-command = "hugo"
+command = "hugo --baseURL https://blog.millerti.me"
 
 [context.production.environment]
 HUGO_VERSION = "0.83.1"
