@@ -23,7 +23,7 @@
     ]
   },
   "permalinks": {
-    "post": "/:year/:month/:day/:title/"
+    "posts": "/:year/:month/:day/:title/"
   },
   "rssLink": "index.xml",
   "taxonomies": {
