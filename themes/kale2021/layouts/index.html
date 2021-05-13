@@ -1,13 +1,22 @@
 {{ define "main" }}
-  <h2>Homepage</h2>
+  <h2>Posts</h2>
   {{ $posts := where .Site.Pages "Kind" "page" }}
-  {{ range .Pages.ByPublishDate.Reverse }}
-    <p>
-      <h3><a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a></h3>
-      {{ partial "metadata.html" . }}
-      <a href="{{ .RelPermalink }}" class="summary">
-        <p>{{ .Summary }}</p>
-      </a>
-    </p>
+  {{ range $posts.ByPublishDate.Reverse }}
+    {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+    {{ $dateFormat := .Site.Params.dateFormat | default "Jan 02, 2006" }}
+    <section style="display: flex;">
+      <time datetime="{{ $dateTime }}" style="margin-right: 0.5rem;">
+        {{ .PublishDate.Format $dateFormat }}
+      </time>
+      <div style="flex: 1; margin-bottom: 1rem;">
+        <h3 style="margin: 0;">
+          <a href="{{ .RelPermalink }}" class="title">
+            {{ .Title }}
+          </a>
+        </h3>
+        <!-- {{ .Description }} -->
+      </div>
+    </section>
+    <!-- {{ partial "metadata.html" . }} -->
   {{end }}
 {{ end }}
