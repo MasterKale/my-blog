@@ -31,5 +31,12 @@
   "rssLink": "index.xml",
   "taxonomies": {
     "categories": "categories"
+  },
+  "markup": {
+    "goldmark": {
+      "renderer": {
+        "unsafe": true
+      }
+    }
   }
 }
