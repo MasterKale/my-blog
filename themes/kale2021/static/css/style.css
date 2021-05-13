@@ -112,6 +112,10 @@ footer {
   color: rgba(var(--text), var(--alpha));
 }
 
+.category--count {
+  color: rgba(var(--text), var(--alpha));
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: 171, 178, 191;
