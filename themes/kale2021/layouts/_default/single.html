@@ -1,6 +1,7 @@
 {{ define "main" }}
   <h2>{{ .Title }}</h2>
-  {{ partial "metadata.html" . }}
-  <br><br>
+  <div class="byline">
+    {{ partial "metadata.html" . }}
+  </div>
   {{ .Content }}
 {{ end }}
