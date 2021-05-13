@@ -107,6 +107,10 @@ footer {
   margin: auto;
 }
 
+.metadata {
+  color: rgba(var(--text), 0.5);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: 171, 178, 191;

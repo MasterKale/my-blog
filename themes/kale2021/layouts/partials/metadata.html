@@ -1,12 +1,16 @@
-{{ $dateTime := .PublishDate.Format "2006-01-02" }}
-{{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
-<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
-{{ if not .Site.Params.hideReadingTime }} &middot; {{ .ReadingTime }} minute read{{ end }}
-{{ if isset .Params "categories" }}
-<span class="categories">
-  {{ range .Params.categories }}
-    {{ $href := print (relURL "/categories/") (urlize .) }}
-    <a href="{{ $href }}">{{ . }}</a>
+<em class="metadata">
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+  <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+  {{ if not .Site.Params.hideReadingTime }} - {{ .ReadingTime }} minute read{{ end }}
+  {{ if isset .Params "categories" }}
+  <span class="categories">
+    (
+      {{ range .Params.categories }}
+        {{ $href := print (relURL "/categories/") (urlize .) }}
+        <a href="{{ $href }}">{{ . }}</a>
+      {{ end }}
+    )
+  </span>
   {{ end }}
-</span>
-{{ end }}
+</em>
