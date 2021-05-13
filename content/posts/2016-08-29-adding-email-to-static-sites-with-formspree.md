@@ -19,8 +19,8 @@ Formspree's premise is simple: whenever a visitor fills out and submits a `<form
 
 Integrating it into your site is as simple as adding `https://formspree.io/your@email.com` into your form's `action` attribute:
 
-```
-<!-- Make sure you replace `your@email.com` with an actual email address -->
+```html
+<!-- Replace `your@email.com` with an actual email address -->
 <form action="https://formspree.io/your@email.com" method="post">
     <label for="name">Name:
         <input type="text" name="name" id="name" />

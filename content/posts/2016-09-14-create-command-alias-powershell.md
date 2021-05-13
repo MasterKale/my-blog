@@ -11,16 +11,22 @@ I've been using the Docker for Windows beta lately and things have been going ra
 
 To start, run the following command from within PowerShell to create your personal PowerShell profile:
 
-	new-item -type file -path $profile -force
+```powershell
+new-item -type file -path $profile -force
+```
 
 This will create a file called `Microsoft.PowerShell_profile.ps1` in `Documents\WindowsPowerShell\`. This is the PowerShell-equivalent to `~/.bash_aliases` in Linux.
 
 Next, add `Set-Alias` commands to `Microsoft.PowerShell_profile.ps1`. The format is:
 
+```sh
 > Set-Alias alias command-to-alias
+```
 
 For example, here's how you can create an alias `dc` for the `docker-compose` command:
 
-	Set-Alias dc docker-compose
+```sh
+Set-Alias dc docker-compose
+```
 
 Now, whenever you open PowerShell you can type `dc up` instead of `docker-compose up` to manage your Compose environment. Pretty simple, right?

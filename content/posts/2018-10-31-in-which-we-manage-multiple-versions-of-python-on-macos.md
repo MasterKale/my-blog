@@ -20,7 +20,7 @@ With the declaration of a single environment variable in your shell config, thou
 
 After installing pyenv, open up your preferred shell's config file and add a **`PYENV_ROOT`** environment variable that points to **`~/.pyenv`**:
 
-```
+```sh
 export PYENV_ROOT="$HOME/.pyenv"
 ```
 
@@ -55,7 +55,7 @@ I ran into a curious issue on macOS 10.14 (Mojave) that prevented me from instal
 
 > zipimport.ZipImportError: can't decompress data; zlib not available
 
-Further investigation dug up [an open issue on pyenv's Github repo](https://github.com/pyenv/pyenv/issues/1219) that reveals that [current versions of Xcode 10 no longer install headers](https://github.com/pyenv/pyenv/issues/1219#issuecomment-428700763) that pyenv relies on to build Python. 
+Further investigation dug up [an open issue on pyenv's Github repo](https://github.com/pyenv/pyenv/issues/1219) that reveals that [current versions of Xcode 10 no longer install headers](https://github.com/pyenv/pyenv/issues/1219#issuecomment-428700763) that pyenv relies on to build Python.
 
 To get around this for now, it's possible to pass in a [custom **`CFLAGS`** variable](https://github.com/pyenv/pyenv/issues/1219#issuecomment-429331397) when calling `pyenv install` to help it find the build tools it needs:
 

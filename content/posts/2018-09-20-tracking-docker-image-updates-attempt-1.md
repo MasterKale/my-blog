@@ -18,9 +18,7 @@ It may surprise you to hear that Github offers the ability to track various type
 
 For this particular solution, I'm interested in the **releases** feed. The URL for this feed typically looks like this (in this case it's the image for the controller software I use to maintain my Ubiquiti Unifi WAP):
 
-```
-https://github.com/jacobalberty/unifi-docker/releases.atom
-```
+> https://github.com/jacobalberty/unifi-docker/releases.atom
 
 The idea is, when a new image goes out to Docker Hub, it means a corresponding release has been tagged on Github. In response, the repo's **releases.atom** feed will update to show this new release. Thus, to track releases of this image, I can simply add this URL to my reader!
 

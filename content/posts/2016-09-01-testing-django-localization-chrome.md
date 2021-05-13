@@ -30,22 +30,26 @@ In another stroke of luck, the Chrome Developers site has an entire section dedi
 <span id="tldr"></span>
 For **Windows**, create a **shortcut** and set a couple of flags:
 
-	path_to_chrome.exe --lang=[locale] --user-data-dir=[c:\locale_profile_dir]
+```sh
+path_to_chrome.exe --lang=[locale] --user-data-dir=[c:\locale_profile_dir]
+```
 
 Swap out `[locale]` for one of the `LANGUAGES` you set up in `settings.py`, and `[c:\locale_profile_dir]` with wherever on your filesystem you want this locale-specific Chrome profile to reside
 
 For **Linux**, set the `LANGUAGE` environment variable before invoking Chrome:
 
-	LANGUAGE=es ./chrome
+```sh
+LANGUAGE=es ./chrome
+```
 
 This can easily be dropped into a `.sh` script, or even set up as an alias in `.bash_aliases`.
 
 **Mac OS X** requires you to [tweak your locale via System Preferences](https://developer.chrome.com/extensions/i18n#testing-mac):
 
 > 1. From the Apple menu, choose System Preferences
-2. Under the Personal section, choose International
-3. Choose your language and location
-4. Restart Chrome
+> 2. Under the Personal section, choose International
+> 3. Choose your language and location
+> 4. Restart Chrome
 
 (I feel as though there must be a cleaner way to do this on Mac, but I'm unable to experiment with this myself. If you know a better way, let me know and I'll update accordingly)
 
@@ -53,6 +57,6 @@ When you're done, start your localized Chrome and visit your Django site. You sh
 
 ![Confirming the Accept-Language HTTP Header](/images/testing-django-localization-chrome/accept-language.png)
 
-This is by far the most convenient way to visualize a Django site's localizations during local development. And best of all, I didn't have to make any changes to the Django codebase, so I know that what I'm seeing is what other users will see when the site goes live. That's all there is to it! 
+This is by far the most convenient way to visualize a Django site's localizations during local development. And best of all, I didn't have to make any changes to the Django codebase, so I know that what I'm seeing is what other users will see when the site goes live. That's all there is to it!
 
 [^1]: https://docs.djangoproject.com/en/1.10/topics/i18n/translation/#how-django-discovers-language-preference

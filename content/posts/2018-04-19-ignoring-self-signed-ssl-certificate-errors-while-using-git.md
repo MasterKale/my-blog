@@ -21,7 +21,7 @@ git -c http.sslVerify=false clone https://git.foo.bar/FIZZ/repo-buzz/
 
 Afterwards I open up a cloned repository's **.git/config** file and add the following setting:
 
-```
+```yaml
 [http]
   sslVerify = true
 ```
