@@ -120,6 +120,18 @@ footer {
   color: rgba(var(--text), var(--alpha));
 }
 
+blockquote {
+  background: rgba(var(--text), 0.25);
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-style: italic;
+  border-left: 0.4rem solid rgb(var(--text))
+}
+
+blockquote p {
+  margin: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: 171, 178, 191;
