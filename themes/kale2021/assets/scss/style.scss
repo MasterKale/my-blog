@@ -42,7 +42,7 @@ a {
 }
 
 h2 {
-  margin-bottom: 0;
+  margin-bottom: 0.25rem;
 }
 
 header {
@@ -87,6 +87,7 @@ header {
 }
 
 main {
+  line-height: 1.5rem;
   &.content-column {
     text-align: justify;
 
@@ -121,6 +122,10 @@ footer {
 .post-summary {
   display: flex;
   line-height: 1.25rem;
+
+  &:first-of-type {
+    margin-top: 1rem;
+  }
 }
 
 .home-post--time {
