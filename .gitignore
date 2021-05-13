@@ -2,3 +2,4 @@
 dev/
 public/
 hugo
+.DS_Store
