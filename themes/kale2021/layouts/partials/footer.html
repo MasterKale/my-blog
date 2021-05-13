@@ -1,7 +1,8 @@
 <footer>
   Copyright &copy; {{ now.Format "2006" }} {{ .Site.Author.name }}
 </footer>
-{{ $resourceJS := resources.Get "js/index.js"}}
+<!-- Temporarily disabling for now -->
+<!-- {{ $resourceJS := resources.Get "js/index.js"}}
 {{ $buildArgs := dict "target" "es2018" }}
 {{ $js := $resourceJS | js.Build $buildArgs | fingerprint }}
-<script src="{{ $js.RelPermalink }}"></script>
+<script src="{{ $js.RelPermalink }}"></script> -->
