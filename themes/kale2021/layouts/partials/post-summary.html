@@ -1,0 +1,14 @@
+<section class="post-summary">
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 02, 2006" }}
+  <time datetime="{{ $dateTime }}" class="home-post--time">
+    {{ .PublishDate.Format $dateFormat }}
+  </time>
+  <div style="flex: 1; margin-bottom: 1rem;">
+    <h3 style="margin: 0;">
+      <a href="{{ .RelPermalink }}" class="title">
+        {{ .Title }}
+      </a>
+    </h3>
+  </div>
+</section>
