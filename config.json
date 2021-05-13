@@ -2,6 +2,9 @@
   "baseURL": "https://blog.millerti.me",
   "languageCode": "en-us",
   "title": "It's Miller Time...for blogging!",
+  "author": {
+    "name": "Matthew Miller"
+  },
   "theme": "kale2021",
   "menu": {
     "main": [
