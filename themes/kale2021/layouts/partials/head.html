@@ -8,6 +8,14 @@
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
   {{ end }}
   <link href="{{ "/favicon_2021.png" | relURL }}" rel="icon">
+  <style>
+    @font-face {
+      font-family: "PT Mono";
+      src: url("{{ "/PTMono-Regular.ttf" | relURL }}") format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  </style>
   {{ $sass := resources.Get "scss/style.scss"}}
   {{ $style := $sass | toCSS | fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
