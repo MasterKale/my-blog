@@ -70,6 +70,10 @@ header nav {
   margin-left: 0.5rem;
 }
 
+main.content-column {
+  text-align: justify;
+}
+
 main.content-column img {
   max-width: 100%;
   height: auto;
