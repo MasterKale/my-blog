@@ -1,17 +1,17 @@
 <header>
-  <h1 class="title">
-    {{ .Site.Title }}
-  </h1>
-  <nav id="nav">
-    <ul class="menu-main">
-      {{ range .Site.Menus.main}}
-      <li>
-        <a href="{{ .URL }}">
+  <div class="content-column">
+    <h1 class="title">
+      {{ .Site.Title }}
+    </h1>
+    <nav id="nav">
+      <ul class="menu-main">
+        {{ range .Site.Menus.main}}
+        <li>
           {{ $text := print .Name | safeHTML }}
-          {{ $text }}
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
+          <a href="{{ .URL }}">{{ $text }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
 </header>
