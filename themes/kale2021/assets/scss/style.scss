@@ -176,3 +176,16 @@ footer {
     --emphasis: 23, 150, 0;
   }
 }
+
+@media screen and (max-width: 600px) {
+  header {
+    .content-column {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin-bottom: 0.25rem;
+    }
+  }
+}
