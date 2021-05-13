@@ -70,6 +70,15 @@ header nav {
   margin-left: 0.5rem;
 }
 
+main.content-column img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(var(--text));
+}
+
 footer {
   padding: var(--content-padding);
   text-align: center;
