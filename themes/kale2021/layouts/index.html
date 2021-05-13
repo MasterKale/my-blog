@@ -2,9 +2,9 @@
 <h2>Posts</h2>
 {{ $posts := where .Site.Pages "Kind" "page" }}
 {{ range $posts.ByPublishDate.Reverse }}
-  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
-  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 02, 2006" }}
   <section class="home-post">
+    {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+    {{ $dateFormat := .Site.Params.dateFormat | default "Jan 02, 2006" }}
     <time datetime="{{ $dateTime }}" class="home-post--time">
       {{ .PublishDate.Format $dateFormat }}
     </time>
