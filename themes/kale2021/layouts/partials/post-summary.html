@@ -4,11 +4,9 @@
   <time datetime="{{ $dateTime }}" class="home-post--time">
     {{ .PublishDate.Format $dateFormat }}
   </time>
-  <div style="flex: 1; margin-bottom: 1rem;">
-    <h3 style="margin: 0;">
-      <a href="{{ .RelPermalink }}" class="title">
-        {{ .Title }}
-      </a>
-    </h3>
-  </div>
+  <h3>
+    <a href="{{ .RelPermalink }}" class="title">
+      {{ .Title }}
+    </a>
+  </h3>
 </section>

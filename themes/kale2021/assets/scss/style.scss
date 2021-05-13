@@ -141,9 +141,11 @@ footer {
 .post-summary {
   display: flex;
   line-height: 1.25rem;
+  margin-top: 1rem;
 
-  &:first-of-type {
-    margin-top: 1rem;
+  h3 {
+    flex: 1;
+    margin: 0;
   }
 }
 
