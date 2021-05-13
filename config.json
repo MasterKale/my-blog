@@ -25,6 +25,14 @@
       }
     ]
   },
+  "module": {
+    "mounts": [
+      {
+        "source": "themes/kale2021/assets/",
+        "target": "assets"
+      }
+    ]
+  },
   "permalinks": {
     "posts": "/:year/:month/:day/:title/"
   },
