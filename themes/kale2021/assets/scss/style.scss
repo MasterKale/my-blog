@@ -107,7 +107,7 @@ blockquote {
   margin: 0;
   padding: 0.5rem 1rem;
   font-style: italic;
-  border-left: 0.4rem solid safe-rgb(var(--text));
+  border-left: 0.4rem solid rgba(var(--text), var(--alpha));
 
   p {
     margin: 0;
