@@ -114,6 +114,25 @@ blockquote {
   }
 }
 
+pre {
+  padding: 0.5rem;
+
+  code {
+    white-space: pre-wrap;
+  }
+}
+
+p {
+  code {
+    font-weight: bold;
+    padding: .25em .5em;
+    font-size: 85%;
+    color: #bf616a;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+  }
+}
+
 footer {
   padding: var(--content-padding);
   text-align: center;
