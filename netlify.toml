@@ -1,9 +1,13 @@
 [build]
 publish = "public/"
-command = "hugo --baseURL https://blog.millerti.me"
+command = "hugo --gc --minify"
 
 [context.production.environment]
 HUGO_VERSION = "0.83.1"
+HUGO_ENV = "production"
+
+[context.deploy-preview]
+command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
 HUGO_VERSION = "0.83.1"
