@@ -40,6 +40,9 @@
   "params": {
     "title": "MillerTi.me Blog",
     "description": "Notes for my future self",
+    "images": [
+      "/site-feature-image.jpg"
+    ],
     "urlGitHub": "https://github.com/MasterKale/",
     "urlTwitter": "https://twitter.com/IAmKale"
   },
