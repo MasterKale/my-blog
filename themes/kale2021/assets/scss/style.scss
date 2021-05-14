@@ -144,15 +144,15 @@ footer {
   line-height: 1.25rem;
   margin-top: 1rem;
 
+  &--date {
+    margin-right: 1rem;
+    color: rgba(var(--text), var(--alpha));
+  }
+
   h3 {
     flex: 1;
     margin: 0;
   }
-}
-
-.home-post--time {
-  margin-right: 1rem;
-  color: rgba(var(--text), var(--alpha));
 }
 
 .content-column {
