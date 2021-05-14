@@ -4,7 +4,7 @@ date = "2016-08-29T08:00:00-07:00"
 description = "It's easier than you think to set up emailing from a statically-generated site!"
 categories = ['howto']
 keywords = ['static site', 'formspree']
-
+hasCode = true
 +++
 
 Github Pages is incredibly useful for hosting pages with largely static content. Create a repo, add a `CNAME` file with the desired domain name, point DNS to Github and boom, you're done! Site changes are as simple as a `git push`, too, making it a quick and painless way to get a basic, informational website up and running.

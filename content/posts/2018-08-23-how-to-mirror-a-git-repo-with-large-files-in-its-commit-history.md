@@ -5,17 +5,18 @@ date = "2018-08-28T10:00:00-07:00"
 categories = ["git", "howto"]
 keywords = ["Github", "git"]
 draft = false
+hasCode = true
 +++
 I was tasked at work recently with mirroring a client's codebase to our internal Github organization. Unfortunately, the initial clone of the repo from the customer's git server took a long time - a _suspiciously_ long time. I've developed a feel for cloning times after working with repos containing all manner of web applications, so right away the time it took to pull down the client's codebase felt "wrong". I immediately suspected that I'd run into issues pushing it up to Github.
 
 Sure enough, when I attempted to push the master branch up to our repo, the process eventually errored out with a message like this:
 
 ```sh
-remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
-remote: error: Trace: e3688f9d27edc7d94098eca76412391d        
-remote: error: See http://git.io/iEPt8g for more information.        
-remote: error: File static/images.zip is 436.46 MB; this exceeds GitHub's file size limit of 100.00 MB        
-remote: error: File source-code/static/images.zip is 436.43 MB; this exceeds GitHub's file size limit of 100.00 MB        
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+remote: error: Trace: e3688f9d27edc7d94098eca76412391d
+remote: error: See http://git.io/iEPt8g for more information.
+remote: error: File static/images.zip is 436.46 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File source-code/static/images.zip is 436.43 MB; this exceeds GitHub's file size limit of 100.00 MB
 To https://github.com/ourcompany/project-name.git
  ! [remote rejected] master -> master (pre-receive hook declined)
 error: failed to push some refs to 'https://MasterKale@github.com/ourcompany/project-name.git'

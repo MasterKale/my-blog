@@ -4,7 +4,7 @@ date = "2016-09-01T19:00:00-07:00"
 description = "There's a reliable way to test out Django's localizations thanks to Chrome."
 keywords = ['django', 'localization', 'internationalization', 'chrome']
 title = "Testing Django Localization with Chrome"
-
+hasCode = true
 +++
 
 TL;DR: <a href="#tldr">Just take me to the good stuff!</a>

@@ -5,6 +5,7 @@ date = "2018-10-31T21:25:34.636Z"
 categories = ["python", "howto"]
 keywords = ["python", "pipenv", "pyenv", "macos", "homebrew"]
 draft = false
+hasCode = true
 +++
 I discovered the hard way recently that Homebrew on macOS will only install the latest version of Python available in its collection of formulae. This frustrated me recently after I accidentally upgraded my Python version to 3.7 in the middle of working on projects that were pinned to 3.6. With no way to revert back via Homebrew, I decided to finally take [pyenv](https://github.com/pyenv/pyenv) out for a spin to see how it'd work along with my [Pipenv](https://pipenv.readthedocs.io/en/latest/)-dominated Python workflow.
 

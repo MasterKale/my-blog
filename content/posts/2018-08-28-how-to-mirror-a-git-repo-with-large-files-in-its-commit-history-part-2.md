@@ -5,6 +5,7 @@ date = "2018-08-28T10:47:32-07:00"
 categories = ["git", "howto"]
 keywords = ["github", "git", "bfg repo cleaner"]
 draft = true
+hasCode = true
 +++
 In an earlier post I used `git` to prune a couple of files larger than Github's filesize limite of 100MB from a repo's commit history.
 

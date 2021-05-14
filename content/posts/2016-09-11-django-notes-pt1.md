@@ -4,7 +4,7 @@ description = "In which I learn to preload JSON on the server to reduce page loa
 categories = ['django']
 keywords = ['django', 'rest', 'framework']
 title = "Django Notes: Part 1"
-
+hasCode = true
 +++
 
 I spent the better part of Saturday working on my latest personal project. Things were going alright within the limitations of using Django for routing and page rendering. I occasionally rued my decision to eschew Angular for a traditional Django app, but I forced myself to adapt and was making good progress.

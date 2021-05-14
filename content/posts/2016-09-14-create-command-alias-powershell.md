@@ -4,7 +4,7 @@ date = "2016-09-14T09:00:00-07:00"
 description = "Figuring out the Windows equivalent to ~/.bash_aliases"
 categories = ['howto', 'powershell']
 keywords = ['powershell', 'command', 'alias', '.bash_aliases']
-
+hasCode = true
 +++
 
 I've been using the Docker for Windows beta lately and things have been going rather smoothly. I got tired of typing `docker-compose` all the time, though, so I dug around a bit and figured out how to create PowerShell aliases to shorten this long command into the much easier `dc`. [MSDN articles](https://msdn.microsoft.com/en-us/powershell/scripting/core-powershell/ise/how-to-use-profiles-in-windows-powershell-ise) aren't the most readable, though, so I distilled things down to this simple guide.

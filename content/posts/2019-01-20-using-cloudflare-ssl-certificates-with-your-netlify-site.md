@@ -4,7 +4,7 @@ date = "2019-01-20T10:00:00-08:00"
 description = "The third piece of the Cloudflare and Netlify SSL puzzle."
 keywords = ["ssl", "netlify", "cloudflare"]
 title = "Using Cloudflare SSL Certificates with your Netlify Site"
-
+hasCode = true
 +++
 Netlify gives you a lot of features in their free tier, including painless, LetsEncrypt-powered SSL certificates for custom domains. If you choose to manage your DNS through Cloudflare, though, then you may wish to generate an Origin Certificate through the Cloudflare dashboard (check the "🔒 Crypto" tab after selecting your domain) to secure your connection from Cloudflare to Netlify.
 
