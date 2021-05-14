@@ -45,7 +45,9 @@
       "renderer": {
         "unsafe": true
       }
+    },
+    "highlight": {
+      "codeFences": false
     }
-  },
-  "pygmentsUseClasses": true
+  }
 }
