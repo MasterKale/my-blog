@@ -40,6 +40,6 @@ path = today.strftime("posts/%Y-%m-%d")
 """
 Execute the Hugo command
 """
-# Final command: hugo new post/2018/February/a-new-post.md --editor code
+# Final command: hugo new posts/2021-05-14-a-new-post.md --editor code
 # The exported TITLE gets picked up in the default.md archetype with the `getenv` template function
 os.system("export TITLE=\"{}\"; ./hugo new {}-{} --editor code".format(title, path, filename))
