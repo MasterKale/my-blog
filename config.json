@@ -1,7 +1,7 @@
 {
   "baseURL": "https://blog.millerti.me",
   "languageCode": "en-us",
-  "title": "It's Miller Time",
+  "title": "MillerTi.me",
   "author": {
     "name": "Matthew Miller"
   },
@@ -19,7 +19,7 @@
         "weight": 2
       },
       {
-        "name": "MillerTi.Me",
+        "name": "About",
         "url": "https://millerti.me",
         "weight": 3
       }
