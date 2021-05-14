@@ -2,8 +2,11 @@
   <h2>{{ .Title }}</h2>
   {{ partial "metadata.html" . }}
   {{ .Content }}
+  <!-- Load highlight.js if the page indicates there's code to highlight -->
+  {{ if .Page.Params.hasCode }}
   <script src="{{ "/js/highlight.pack.00233d63.js" | relURL }}"></script>
   <script>
     hljs.highlightAll();
   </script>
+  {{ end }}
 {{ end }}
