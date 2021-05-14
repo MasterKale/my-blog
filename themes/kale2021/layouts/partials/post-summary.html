@@ -5,6 +5,11 @@
     <time datetime="{{ $dateTime }}">
       {{ .PublishDate.Format $dateFormat }}
     </time>
+    {{ if not .Site.Params.hideReadingTime }}
+    <span class="post-summary--read-time">
+       - {{ .ReadingTime }} minute read
+    </span>
+    {{ end }}
   </em>
   <h3>
     <a href="{{ .RelPermalink }}" class="title">
