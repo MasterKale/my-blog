@@ -4,9 +4,14 @@
   <em class="post-summary--date">
     <time datetime="{{ $dateTime }}">
       {{ .PublishDate.Format $dateFormat }}
+      {{ if not .Site.Params.hideReadingTime }}
+        <span class="post-summary--read-time--desktop">
+          {{ .ReadingTime }} min read
+        </span>
+      {{ end }}
     </time>
     {{ if not .Site.Params.hideReadingTime }}
-    <span class="post-summary--read-time">
+    <span class="post-summary--read-time--mobile">
        - {{ .ReadingTime }} minute read
     </span>
     {{ end }}
