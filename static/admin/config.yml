@@ -3,9 +3,9 @@ display_url: https://blog.millerti.me
 backend:
   name: git-gateway
 
-  # Uncomment to enable Netlify CMS's editorial workflow:
+# Enables Netlify CMS's editorial workflow:
 # https://www.netlifycms.org/docs/configuration-options/#publish-mode
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 
 media_folder: "static/images"
 public_folder: "/images"
