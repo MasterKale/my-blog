@@ -36,3 +36,14 @@ collections:
       - {label: "Has Code? (enables highlighting)", name: "hasCode", widget: "boolean", default: false}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
+    view_filters:
+      - label: Drafts
+        field: "draft"
+        pattern: true
+    view_groups:
+      - label: Year
+        field: date
+        # groups items based on the value matched by the pattern
+        pattern: \d{4}
+      - label: Drafts
+        field: draft
