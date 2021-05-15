@@ -10,3 +10,5 @@ draft = false
 So apparently when I "Save" this post, Netlify CMS will create a new branch for the article and then spawn a PR to merge it into master. Changes to the article get tracked as commits to the branch. Then, when I'm ready for the article to go live, I can "Publish" it to squash merge the PR into master, and the branch will get deleted.
 
 Let's find out if it works as advertised. SAVE!
+
+When I changed status to "In Review" (in the upper right of this editor) the `netlify-cms/draft` tag was removed and the `netlify-cms/pending_review` tag was added.
