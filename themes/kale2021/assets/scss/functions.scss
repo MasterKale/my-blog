@@ -1,0 +1,8 @@
+// SASS won't handle `rgb(var(--foo))` native CSS statements, so we need this method
+// if we don't want to use the "RGB()" workaround instead.
+//
+// Solves the following SASS error:
+// "Error: Function rgb is missing argument $green."
+@function safe-rgb($var) {
+  @return unquote("rgb(#{$var})");
+}

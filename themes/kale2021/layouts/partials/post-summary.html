@@ -1,0 +1,24 @@
+<section class="post-summary">
+  {{ $dateTime := .PublishDate.Format "2006-01-02" }}
+  {{ $dateFormat := .Site.Params.dateFormat | default "Jan 02, 2006" }}
+  <em class="post-summary--date">
+    <time datetime="{{ $dateTime }}">
+      {{ .PublishDate.Format $dateFormat }}
+      {{ if not .Site.Params.hideReadingTime }}
+        <span class="post-summary--read-time--desktop">
+          {{ .ReadingTime }} min read
+        </span>
+      {{ end }}
+    </time>
+    {{ if not .Site.Params.hideReadingTime }}
+    <span class="post-summary--read-time--mobile">
+       - {{ .ReadingTime }} minute read
+    </span>
+    {{ end }}
+  </em>
+  <h3>
+    <a href="{{ .RelPermalink }}" class="title">
+      {{ .Title }}
+    </a>
+  </h3>
+</section>

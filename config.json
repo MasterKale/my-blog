@@ -1,0 +1,62 @@
+{
+  "baseURL": "https://blog.millerti.me",
+  "languageCode": "en-us",
+  "title": "MillerTi.me",
+  "author": {
+    "name": "Matthew Miller"
+  },
+  "theme": "kale2021",
+  "menu": {
+    "main": [
+      {
+        "name": "Home",
+        "url": "/",
+        "weight": 1
+      },
+      {
+        "name": "Categories",
+        "url": "/categories/",
+        "weight": 2
+      },
+      {
+        "name": "About",
+        "url": "https://millerti.me",
+        "weight": 3
+      }
+    ]
+  },
+  "module": {
+    "mounts": [
+      {
+        "source": "themes/kale2021/assets/",
+        "target": "assets"
+      }
+    ]
+  },
+  "permalinks": {
+    "posts": "/:year/:month/:day/:title/"
+  },
+  "rssLink": "index.xml",
+  "params": {
+    "title": "MillerTi.me Blog",
+    "description": "Notes for my future self",
+    "images": [
+      "/site-feature-image.jpg"
+    ],
+    "urlGitHub": "https://github.com/MasterKale/",
+    "urlTwitter": "https://twitter.com/IAmKale"
+  },
+  "taxonomies": {
+    "categories": "categories"
+  },
+  "markup": {
+    "goldmark": {
+      "renderer": {
+        "unsafe": true
+      }
+    },
+    "highlight": {
+      "codeFences": false
+    }
+  }
+}

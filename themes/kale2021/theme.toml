@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Kale2021"
+license = "MIT"
+licenselink = ""
+description = "This is my theme. I made this. Circa 2021"
+homepage = "https://blog.millerti.me"
+tags = ["blog", "technical", "personal"]
+features = ["blog", "technical", "personal"]
+min_version = "0.83.1"
+
+[author]
+  name = "Matthew Miller"
+  homepage = "https://millerti.me"

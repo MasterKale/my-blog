@@ -1,0 +1,17 @@
+<header>
+  <div class="content-column">
+    <h1 class="title">
+      <a href="/">{{ .Site.Title }}</a>
+    </h1>
+    <nav id="nav">
+      <ul class="menu-main">
+        {{ range .Site.Menus.main}}
+        <li>
+          {{ $text := print .Name | safeHTML }}
+          <a href="{{ .URL }}">{{ $text }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>
