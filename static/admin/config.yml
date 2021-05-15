@@ -12,12 +12,12 @@ public_folder: "/images"
 
 collections:
     # Used in routes, e.g., /admin/collections/blog
-  - name: "post"
+  - name: "posts"
     # What to call items in the CMS
     label: "Posts"
     label_singular: "Post"
     # Where to store posts (relative to the project root)
-    folder: "content/post"
+    folder: "content/posts"
     # Allow for posts to be created in the CMS
     create: true
     # The filename slug to use when saving posts
@@ -33,5 +33,6 @@ collections:
       - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Post Categories (comma-separated)", name: "categories", widget: "list", default: []}
       - {label: "Meta Keywords (comma-separated)", name: "keywords", widget: "list", default: []}
+      - {label: "Has Code? (enables highlighting)", name: "hasCode", widget: "boolean", default: false}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
