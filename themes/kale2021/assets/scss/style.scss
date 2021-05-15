@@ -83,7 +83,9 @@ header {
 
   li {
     display: inline-block;
-    margin-left: 0.5rem;
+    &:not(:first-of-type) {
+      margin-left: 1rem;
+    }
   }
 }
 
