@@ -12,3 +12,5 @@ So apparently when I "Save" this post, Netlify CMS will create a new branch for 
 Let's find out if it works as advertised. SAVE!
 
 When I changed status to "In Review" (in the upper right of this editor) the `netlify-cms/draft` tag was removed and the `netlify-cms/pending_review` tag was added.
+
+Previewing this will work better once I merge the refresh in. The Preview link in GitHub uses the **master** branch which has posts in **content/post/** instead of **content/posts/** where things will get relocated once I merge in the refresh.
