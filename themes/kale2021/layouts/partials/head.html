@@ -12,15 +12,20 @@
   <!-- Favicon -->
   <link href="{{ "/favicon_2021.png" | relURL }}" rel="icon">
   <!-- OpenGraph + Twitter -->
+  {{ $metaDescription := $.Site.Params.description }}
+  {{ if .Description }}{{ $metaDescription = .Description }}{{ end }}
+  <meta name="description" content="{{ $metaDescription }}" />
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   <!-- Custom font (loaded here because it's a static asset) -->
   <style>
     @font-face {
-      font-family: "PT Mono";
-      src: url("{{ "/PTMono-Regular.ttf" | relURL }}") format('truetype');
+      font-family: "Input Mono";
+      src: url("{{ "/InputMono-Light-Licensed.woff2" | relURL }}") format("woff2"),
+      url("{{ "/InputMono-Light-Licensed.woff" | relURL }}") format("woff");
       font-weight: normal;
       font-style: normal;
+      font-display: block;
     }
   </style>
   <!-- Pull in template SCSS and build to CSS -->
@@ -29,7 +34,8 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   <!-- highlight.js syntax formatting (only when the page has code) -->
   {{ if .Page.Params.hasCode }}
-  <link rel="stylesheet" href="{{ "/css/tomorrow-night.css" | relURL }}">
+  <!-- Deferred as per https://web.dev/defer-non-critical-css/ -->
+  <link rel="stylesheet" href="{{ "/css/tomorrow-night.css" | relURL }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   {{ end }}
   <!-- Page title -->
   {{ $title := print .Site.Title " | " .Title }}

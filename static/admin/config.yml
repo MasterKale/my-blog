@@ -15,7 +15,7 @@ collections:
     # Used in routes, e.g., /admin/collections/blog
   - name: "posts"
     # What to call items in the CMS
-    label: "Posts"
+    label: "Post"
     label_singular: "Post"
     # Where to store posts (relative to the project root)
     folder: "content/posts"
@@ -37,6 +37,8 @@ collections:
       - {label: "Has Code? (enables highlighting)", name: "hasCode", widget: "boolean", default: false}
       - {label: "Draft", name: "draft", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
+    summary: "{{year}}-{{month}}-{{day}} - {{title}}"
+    preview_path: "{{year}}/{{month}}/{{day}}/{{title}}/"
     view_filters:
       - label: Drafts
         field: "draft"

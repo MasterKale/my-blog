@@ -34,7 +34,7 @@ title = ' '.join(args.title)
 Prepare the date variables for the path
 """
 today = date.today()
-# Create the path as "post/2018/February"
+# Create the path as "posts/2021-05-14"
 path = today.strftime("posts/%Y-%m-%d")
 
 """

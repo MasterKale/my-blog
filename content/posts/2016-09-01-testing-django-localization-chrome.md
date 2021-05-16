@@ -1,6 +1,6 @@
 +++
 categories = ['howto', 'django']
-date = "2016-09-01T19:00:00-07:00"
+date = "2016-09-02T02:00:00Z"
 description = "There's a reliable way to test out Django's localizations thanks to Chrome."
 keywords = ['django', 'localization', 'internationalization', 'chrome']
 title = "Testing Django Localization with Chrome"

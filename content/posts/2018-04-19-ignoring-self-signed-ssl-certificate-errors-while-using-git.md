@@ -1,6 +1,6 @@
 +++
 title = "Ignoring Self-Signed SSL Certificate Errors while using Git"
-date = 2018-04-19T10:43:11-07:00
+date = "2018-04-19T17:43:11Z"
 description = "How to get Git to play along with self-managed Git servers"
 keywords = ["git", "ssl", "sslVerify"]
 categories = ["git"]

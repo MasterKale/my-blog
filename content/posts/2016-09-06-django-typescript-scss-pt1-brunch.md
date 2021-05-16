@@ -1,5 +1,5 @@
 +++
-date = "2016-09-06T19:00:00-07:00"
+date = "2016-09-07T02:00:00Z"
 description = "For when you absolutely, positively cannot live without TypeScript and SASS (and I don't blame you!)"
 categories = ['howto', 'django']
 keywords = ['django', 'typescript', 'sass', 'scss', 'brunch.io']

@@ -1,14 +1,14 @@
 @import 'functions';
 
 :root {
-  --font-family: "PT Mono", monospace;
+  --font-family: "Input Mono", monospace;
   --font-size: 14px;
   --max-content-width: 42rem;
   --content-padding: 1rem;
   --background: 255, 255, 255;
   --text: 49, 49, 49;
   --emphasis: 11, 138, 0;
-  --alpha: 0.5;
+  --alpha: 0.8;
 }
 
 html {
@@ -41,9 +41,9 @@ a {
   }
 }
 
-h1 { font-size: 1.5rem; }
-h2 { font-size: 1.25rem; margin-bottom: 0.25rem; }
-h3 { font-size: 1rem; font-weight: normal; }
+h1 { font-size: 1.5em; }
+h2 { font-size: 1.25em; margin-bottom: 0.25rem; }
+h3 { font-size: 1.1em; font-weight: normal; }
 
 header {
   border-bottom: 1px solid safe-rgb(var(--text));
@@ -61,7 +61,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1rem;
+    font-size: 1.1em;
   }
 
   .content-column {

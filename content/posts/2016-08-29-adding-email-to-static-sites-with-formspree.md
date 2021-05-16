@@ -1,6 +1,6 @@
 +++
 title = "Adding email functionality to a static site with Formspree"
-date = "2016-08-29T08:00:00-07:00"
+date = "2016-08-29T15:00:00Z"
 description = "It's easier than you think to set up emailing from a statically-generated site!"
 categories = ['howto']
 keywords = ['static site', 'formspree']
