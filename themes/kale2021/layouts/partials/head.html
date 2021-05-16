@@ -12,6 +12,9 @@
   <!-- Favicon -->
   <link href="{{ "/favicon_2021.png" | relURL }}" rel="icon">
   <!-- OpenGraph + Twitter -->
+  {{ $metaDescription := $.Site.Params.description }}
+  {{ if .Description }}{{ $metaDescription = .Description }}{{ end }}
+  <meta name="description" content="{{ $metaDescription }}" />
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   <!-- Custom font (loaded here because it's a static asset) -->
