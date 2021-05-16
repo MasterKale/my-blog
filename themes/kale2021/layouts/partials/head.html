@@ -20,8 +20,9 @@
   <!-- Custom font (loaded here because it's a static asset) -->
   <style>
     @font-face {
-      font-family: "PT Mono";
-      src: url("{{ "/PTMono-Regular.ttf" | relURL }}") format('truetype');
+      font-family: "Input Mono";
+      src: url("{{ "/InputMono-Light-Testing.woff2" | relURL }}") format("woff2"),
+      url("{{ "/InputMono-Light-Testing.woff" | relURL }}") format("woff");
       font-weight: normal;
       font-style: normal;
       font-display: block;
