@@ -33,7 +33,8 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   <!-- highlight.js syntax formatting (only when the page has code) -->
   {{ if .Page.Params.hasCode }}
-  <link rel="stylesheet" href="{{ "/css/tomorrow-night.css" | relURL }}">
+  <!-- Deferred as per https://web.dev/defer-non-critical-css/ -->
+  <link rel="stylesheet" href="{{ "/css/tomorrow-night.css" | relURL }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
   {{ end }}
   <!-- Page title -->
   {{ $title := print .Site.Title " | " .Title }}
