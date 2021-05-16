@@ -1,5 +1,5 @@
 +++
-date = "2016-09-11T01:00:00-07:00"
+date = "2016-09-11T08:00:00Z"
 description = "In which I learn to preload JSON on the server to reduce page load times."
 categories = ['django']
 keywords = ['django', 'rest', 'framework']

@@ -1,6 +1,6 @@
 +++
 title = "Well hello there!"
-date = "2016-08-26T21:00:00-07:00"
+date = "2016-08-27T04:00:00Z"
 description = "\"Start a blog,\" they said. \"It might eventually lend credibility,\" they said..."
 categories = ['misc']
 keywords = ['Python', 'Hugo', 'GitLab', 'DO']

@@ -1,7 +1,7 @@
 +++
 title = "How to mirror a git repo with large files in its commit history"
 description = "For when Github's 100MB file size restriction bumps up against previously-committed files"
-date = "2018-08-28T10:00:00-07:00"
+date = "2018-08-28T17:00:00Z"
 categories = ["git", "howto"]
 keywords = ["Github", "git"]
 draft = false

@@ -1,6 +1,6 @@
 +++
 title = "Skipping CI Jobs on GitLab"
-date = 2018-02-22T08:35:17-08:00
+date = "2018-02-22T16:35:17Z"
 description = "tl;dr: Add [skip ci] to your commit messages"
 categories = ['howto', 'gitlab']
 keywords = ['gitlab', 'continuous integration', 'ci']

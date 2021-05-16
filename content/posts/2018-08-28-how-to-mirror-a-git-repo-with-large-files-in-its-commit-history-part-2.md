@@ -1,7 +1,7 @@
 +++
 title = "How to mirror a git repo with large files in its commit history, part 2"
 description = "Using BFG Repo Cleaner to prune large files from a repo's commit history"
-date = "2018-08-28T10:47:32-07:00"
+date = "2018-08-28T17:47:32Z"
 categories = ["git", "howto"]
 keywords = ["github", "git", "bfg repo cleaner"]
 draft = true
