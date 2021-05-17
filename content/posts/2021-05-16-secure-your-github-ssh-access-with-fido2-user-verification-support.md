@@ -1,9 +1,9 @@
 +++
 title = "Secure your GitHub ssh access with FIDO2 User Verification support"
-description = "Authenticate with PIN or biometrics, because User Presence just isn't good enough for us"
+description = "Improve security with a user-verifying PIN, because a tap just isn't good enough for us"
 date = 2021-05-16T22:14:34.290Z
 categories = ["github", "fido2", "howto"]
-keywords = ["github", "ssh", "fido2", "UV"]
+keywords = ["github", "ssh", "fido2", "UV", "PIN", "security", "key", "authenticator"]
 hasCode = true
 draft = false
 +++
