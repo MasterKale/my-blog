@@ -1,5 +1,5 @@
 +++
-title = "Improve GitHub SSH security with FIDO2's PIN support"
+title = "Strengthen GitHub SSH access with FIDO2's PIN support"
 description = "Because a tap just isn't good enough."
 date = 2021-05-16T22:14:34.290Z
 categories = ["github", "fido2", "howto"]
