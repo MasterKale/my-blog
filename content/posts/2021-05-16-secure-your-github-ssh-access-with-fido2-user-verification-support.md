@@ -7,11 +7,11 @@ keywords = ["github", "ssh", "fido2", "UV", "PIN", "security", "key", "authentic
 hasCode = true
 draft = false
 +++
-Early in May [GitHub announced support for securing SSH git operations with FIDO2 security keys](https://github.blog/2021-05-10-security-keys-supported-ssh-git-operations/) instead of a traditional public+private key pair. One of the greatest benefits of using a security key is that the private key never leaves the secure hardware device itself. This makes it highly improbably that anyone would be able to impersonate you due to computer or account compromise, unlike traditional private keys that reside on your computer.
+Early in May [GitHub announced support for securing SSH git operations with security keys](https://github.blog/2021-05-10-security-keys-supported-ssh-git-operations/) instead of with a traditional public+private key pair. One of the greatest benefits of using a security key is that the private key never leaves the secure hardware device itself. This makes it highly improbable that anyone could gain the ability to impersonate you after a computer or account compromise, unlike traditional private keys that reside on your computer.
 
 Disappointingly GitHub only covers how to set this all up to support "User Presence" mode - that is, you're only required to tap your security key without proving who you are. This has the undesirable side effect of giving *anyone* who has access to your key the power to access your repositories!
 
-Fortunately there's a better way to protect your account. FIDO2 offers an additional level of security through "User Verification". In the land of WebAuthn this means PIN entry or local biometric scan, combining "something you have" with "something you know" or "something you are" (the basic tenets of multifactor authentication). In the context of ssh access this means requiring a PIN to access your repositories (biometrics aren't yet supported by OpenSSH).
+Fortunately there's a better way to protect your account. FIDO2 (the security key capability that enables all of this) offers an additional level of security through "User Verification". In the land of WebAuthn this means PIN entry or local biometric scan, combining "something you have" with "something you know" or "something you are" (the basic tenets of multifactor authentication). In the context of ssh access this means requiring a PIN to access your repositories (biometrics aren't yet supported by OpenSSH).
 
 What follows is a guide to securing git operations with a higher degree of scrutiny over user identity. When you finish you can rest easy knowing that not just anyone with your security key can commit to your repos both public and private.
 
@@ -19,7 +19,7 @@ Let's begin.
 
 #### Step 1: Pick a security key (skip this if you already have one)
 
-Anything fairly recent with "FIDO2" or "WebAuthn" support will work. The [YubiKey Security Key](https://www.yubico.com/product/security-key-nfc-by-yubico/) is an affordable (USB-A) starter choice, while the [Yubikey 5 series](https://www.yubico.com/store/#yubikey-5-series) offer more variety and capabilities (including USB-C) for a bit of a premium. [Feitian](https://www.ftsafe.com/Products/FIDO) and [TrustKey](https://www.trustkeysolutions.com/security-keys) are also reputable brands with their own varieties of security keys.
+Anything fairly recent with "FIDO2" or "WebAuthn" support will work. The [YubiKey Security Key](https://www.yubico.com/product/security-key-nfc-by-yubico/) is an affordable (USB-A) starter choice, while the [YubiKey 5 series](https://www.yubico.com/store/#yubikey-5-series) offer more variety and capabilities (including USB-C) for a bit of a premium. [Feitian](https://www.ftsafe.com/Products/FIDO) and [TrustKey](https://www.trustkeysolutions.com/security-keys) are also reputable brands with their own varieties of FIDO2 security keys.
 
 #### Step 2: Generate a keypair
 
@@ -66,7 +66,7 @@ Host github.com
 
 #### Step 5: Confirm ssh access
 
-Open up a terminal and ssh into github.com to confirm that your SSH key is properly set up:
+Open up a terminal and `ssh` into github.com to confirm that your SSH key is properly set up:
 
 ```sh
 $> ssh -T git@github.com
@@ -110,7 +110,7 @@ Desktop Chrome is the most reliable way to set a PIN. Open up a tab and head to 
 #### - "Bad configuration option: usekeychain"
 
 ```sh
-$> ssh -T git@github.com                                            ✔
+$> ssh -T git@github.com
 /Users/you/.ssh/config: line 3: Bad configuration option: usekeychain
 /Users/you/.ssh/config: terminating, 1 bad configuration options
 ```
