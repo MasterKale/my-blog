@@ -84,8 +84,6 @@ And that's it! You've successfully leveraged FIDO2's User Verification feature f
 
 #### - "unknown key type ecdsa-sk"
 
-When you try to generate the key you might see the following error:
-
 ```sh
 $> ssh-keygen -t ecdsa-sk -C <email address> -O verify-required
 unknown key type ecdsa-sk
@@ -110,6 +108,12 @@ Key enrollment failed: invalid format
 Desktop Chrome is the most reliable way to set a PIN. Open up a tab and head to `about:settings` > **Security** > **Manage security keys** > **Create a PIN** to set one.
 
 #### - "Bad configuration option: usekeychain"
+
+```sh
+$> ssh -T git@github.com                                            ✔
+/Users/you/.ssh/config: line 3: Bad configuration option: usekeychain
+/Users/you/.ssh/config: terminating, 1 bad configuration options
+```
 
 Add `IgnoreUnknown UseKeychain` to the top of your github.com Host entry in **~/.ssh/config**:
 
