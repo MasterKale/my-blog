@@ -66,7 +66,7 @@ Host github.com
 
 #### Step 5: Confirm ssh access
 
-Open up a terminal and `ssh` into github.com to confirm that your SSH key is properly set up:
+Open up a terminal and [`ssh` into github.com](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection) to confirm that your SSH key is properly set up:
 
 ```sh
 $> ssh -T git@github.com
