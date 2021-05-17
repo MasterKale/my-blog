@@ -19,7 +19,7 @@ Let's begin.
 
 #### Step 1: Pick a security key (skip this if you already have one)
 
-Anything fairly recent with "FIDO2" or "WebAuthn" support will work. The [YubiKey Security Key](https://www.yubico.com/product/security-key-nfc-by-yubico/) is an affordable starter choice, while the [Yubikey 5 series](https://www.yubico.com/store/#yubikey-5-series) offer more variety and capabilities for a bit of a premium. [Feitian](https://www.ftsafe.com/Products/FIDO) and [TrustKey](https://www.trustkeysolutions.com/security-keys) are also reputable brands with their own varieties of security keys.
+Anything fairly recent with "FIDO2" or "WebAuthn" support will work. The [YubiKey Security Key](https://www.yubico.com/product/security-key-nfc-by-yubico/) is an affordable (USB-A) starter choice, while the [Yubikey 5 series](https://www.yubico.com/store/#yubikey-5-series) offer more variety and capabilities (including USB-C) for a bit of a premium. [Feitian](https://www.ftsafe.com/Products/FIDO) and [TrustKey](https://www.trustkeysolutions.com/security-keys) are also reputable brands with their own varieties of security keys.
 
 #### Step 2: Generate a keypair
 
@@ -42,7 +42,7 @@ When you're finished, you'll end up with two files:
 - **/Users/you/.ssh/security-key-name-uv**
 - **/Users/you/.ssh/security-key-name-uv.pub**
 
-#### Step 3: Add your public key to Github
+#### Step 3: Add the public key to Github
 
 Head to your [SSH and GPG keys](https://github.com/settings/keys) settings in Github and click **New SSH key**. Enter a value for the key's **Title**, like "security-key-name-uv.pub", then paste in the value of **/Users/you/.ssh/security-key-name-uv.pub** into the **Key** textbox:
 
@@ -50,9 +50,9 @@ Head to your [SSH and GPG keys](https://github.com/settings/keys) settings in Gi
 
 Click **Add SSH key** to save the public key to your account.
 
-#### Step 4: Update .ssh/config to use the generated "private key"
+#### Step 4: Update your ssh config to use the "private key"
 
-Open `~/.ssh/config` in your favorite editor and add the following:
+Open **~/.ssh/config** in your favorite editor and add the following:
 
 ```
 Host github.com
@@ -99,7 +99,7 @@ OpenSSH 8.2 was the first version to support ecdsa-sk key types. Installing the 
 
 #### - "Key enrollment failed: invalid format"
 
-```
+```sh
 $> ssh-keygen -t ecdsa-sk -C <email address> -O verify-required
 Generating public/private ecdsa-sk key pair.
 You may need to touch your authenticator to authorize key generation.
@@ -107,13 +107,13 @@ Enter PIN for authenticator:
 Key enrollment failed: invalid format
 ```
 
-Desktop Chrome is the most reliable way to set a PIN. Open up a tab and head to `about:settings` > **Security** > **Manage security keys** > **Create a PIN** to set one. Retry the command above afterwards.
+Desktop Chrome is the most reliable way to set a PIN. Open up a tab and head to `about:settings` > **Security** > **Manage security keys** > **Create a PIN** to set one.
 
 #### - "Bad configuration option: usekeychain"
 
 Add `IgnoreUnknown UseKeychain` to the top of your github.com Host entry in **~/.ssh/config**:
 
-```
+```txt
 Host github.com
     IgnoreUnknown UseKeychain
     AddKeysToAgent yes
