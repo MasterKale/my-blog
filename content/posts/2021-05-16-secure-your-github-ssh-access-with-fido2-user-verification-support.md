@@ -17,11 +17,11 @@ What follows is a guide to securing git operations with a higher degree of scrut
 
 Let's begin.
 
-#### Step 1: Pick a security key (skip this if you already have one)
+### Step 1: Pick a security key (skip this if you already have one)
 
 Anything fairly recent with "FIDO2" or "WebAuthn" support will work. The [YubiKey Security Key](https://www.yubico.com/product/security-key-nfc-by-yubico/) is an affordable (USB-A) starter choice, while the [YubiKey 5 series](https://www.yubico.com/store/#yubikey-5-series) offer more variety and capabilities (including USB-C) for a bit of a premium. [Feitian](https://www.ftsafe.com/Products/FIDO) and [TrustKey](https://www.trustkeysolutions.com/security-keys) are also reputable brands with their own varieties of FIDO2 security keys.
 
-#### Step 2: Generate a keypair
+### Step 2: Generate a keypair
 
 > NOTE: You _must_ have a PIN set on your security key to continue. If one isn't set then I suggest using desktop Chrome > `about:settings` > **Security** > **Manage security keys** > **Create a PIN** to set one. Your PIN _must_ be at least four characters long, but beyond that you're free to set whatever you want (including an entire passphrase)!
 
@@ -42,7 +42,7 @@ When you're finished, you'll end up with two files:
 - **/Users/you/.ssh/security-key-name-uv**
 - **/Users/you/.ssh/security-key-name-uv.pub**
 
-#### Step 3: Add the public key to Github
+### Step 3: Add the public key to Github
 
 Head to your [SSH and GPG keys](https://github.com/settings/keys) settings in Github and click **New SSH key**. Enter a value for the key's **Title**, like "security-key-name-uv.pub", then paste in the value of **/Users/you/.ssh/security-key-name-uv.pub** into the **Key** textbox:
 
@@ -50,7 +50,7 @@ Head to your [SSH and GPG keys](https://github.com/settings/keys) settings in Gi
 
 Click **Add SSH key** to save the public key to your account.
 
-#### Step 4: Update your ssh config to use the "private key"
+### Step 4: Update your ssh config to use the "private key"
 
 Open **~/.ssh/config** in your favorite editor and add the following:
 
@@ -64,7 +64,7 @@ Host github.com
 
 `IdentityFile /Users/you/.ssh/security-key-name-uv` tells SSH to authenticate with your security key whenever you try to access GitHub. It's worth noting that this "private key" on your computer is useless without the corresponding security key that generated it, hence the quotes around "private key"!
 
-#### Step 5: Confirm ssh access
+### Step 5: Confirm ssh access
 
 Open up a terminal and [`ssh` into github.com](https://docs.github.com/en/github/authenticating-to-github/testing-your-ssh-connection) to confirm that your SSH key is properly set up:
 
@@ -82,7 +82,7 @@ And that's it! You've successfully leveraged FIDO2's User Verification feature f
 
 ### Troubleshooting:
 
-#### - "unknown key type ecdsa-sk"
+### - "unknown key type ecdsa-sk"
 
 ```sh
 $> ssh-keygen -t ecdsa-sk -C <email address> -O verify-required
@@ -95,7 +95,7 @@ OpenSSH 8.2 was the first version to support ecdsa-sk key types. Installing the 
 
 > On macOS you can easily accomplish this with `brew install openssh`
 
-#### - "Key enrollment failed: invalid format"
+### - "Key enrollment failed: invalid format"
 
 ```sh
 $> ssh-keygen -t ecdsa-sk -C <email address> -O verify-required
@@ -107,7 +107,7 @@ Key enrollment failed: invalid format
 
 Desktop Chrome is the most reliable way to set a PIN. Open up a tab and head to `about:settings` > **Security** > **Manage security keys** > **Create a PIN** to set one.
 
-#### - "Bad configuration option: usekeychain"
+### - "Bad configuration option: usekeychain"
 
 ```sh
 $> ssh -T git@github.com
