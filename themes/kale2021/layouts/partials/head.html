@@ -27,6 +27,15 @@
       font-weight: 300;
       font-display: block;
     }
+
+    @font-face {
+      font-family: 'InputMono';
+      src: url("{{ "/InputMono-Bold-Licensed.woff2" | relURL }}") format("woff2"),
+           url("{{ "/InputMono-Bold-Licensed.woff" | relURL }}") format("woff");
+      font-style: normal;
+      font-weight: bold;
+      font-display: block;
+    }
   </style>
   <!-- Pull in template SCSS and build to CSS -->
   {{ $sass := resources.Get "scss/style.scss"}}
