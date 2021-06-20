@@ -8,9 +8,9 @@ hasCode = true
 +++
 Netlify gives you a lot of features in their free tier, including painless, LetsEncrypt-powered SSL certificates for custom domains. If you choose to manage your DNS through Cloudflare, though, then you may wish to generate an Origin Certificate through the Cloudflare dashboard (check the "🔒 Crypto" tab after selecting your domain) to secure your connection from Cloudflare to Netlify.
 
-![](/images/Screen%20Shot%202019-01-20%20at%2012.31.13%20PM.png)After creating one of these certificates (using the default **PEM key format**), Cloudflare presents you with a **Origin Certificate** as well as the corresponding **Private Key**. These can be copy-pasted directly into the "Certificate" and "Private key" fields respectively in Netlify's custom certificate modal when you choose "Provide your own certificate" (or "Update custom certificate"):
+![](images/Screen%20Shot%202019-01-20%20at%2012.31.13%20PM.png)After creating one of these certificates (using the default **PEM key format**), Cloudflare presents you with a **Origin Certificate** as well as the corresponding **Private Key**. These can be copy-pasted directly into the "Certificate" and "Private key" fields respectively in Netlify's custom certificate modal when you choose "Provide your own certificate" (or "Update custom certificate"):
 
-![](/images/Screen%20Shot%202019-01-20%20at%2012.37.04%20PM.png)Unfortunately, Netlify _also_ requires a value for "Intermediate Certs". In these instances, Cloudflare provides their own [Origin CA Certificate](https://support.cloudflare.com/hc/en-us/articles/218689638) that contains all of the intermediate certificates needed to validate the identity of your generated Origin Certificate.
+![](images/Screen%20Shot%202019-01-20%20at%2012.37.04%20PM.png)Unfortunately, Netlify _also_ requires a value for "Intermediate Certs". In these instances, Cloudflare provides their own [Origin CA Certificate](https://support.cloudflare.com/hc/en-us/articles/218689638) that contains all of the intermediate certificates needed to validate the identity of your generated Origin Certificate.
 
 For that third field of the modal, you can simply copy-paste the below **RSA** version of their certificate into it:
 
@@ -43,6 +43,6 @@ Fu6q54beR89jDc+oABmOgg==
 
 Afterwards, click "Install Certificate", and Netlify should accept your custom Cloudflare Origin Certificate:
 
-![](/images/Screen%20Shot%202019-01-20%20at%2012.51.29%20PM.png)At this point, if you haven't already, you'll want to add a CNAME DNS record in Cloudflare that points to your Netlify site's domain name. Provided your DNS is already handled by Cloudflare, you should see the green SSL lock next to your domain in relatively short order:
+![](images/Screen%20Shot%202019-01-20%20at%2012.51.29%20PM.png)At this point, if you haven't already, you'll want to add a CNAME DNS record in Cloudflare that points to your Netlify site's domain name. Provided your DNS is already handled by Cloudflare, you should see the green SSL lock next to your domain in relatively short order:
 
-![](/images/Screen%20Shot%202019-01-20%20at%201.01.14%20PM.png)
+![](images/Screen%20Shot%202019-01-20%20at%201.01.14%20PM.png)

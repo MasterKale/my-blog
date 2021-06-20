@@ -55,7 +55,7 @@ This can easily be dropped into a `.sh` script, or even set up as an alias in `.
 
 When you're done, start your localized Chrome and visit your Django site. You should now see the site translated into the matching locale. You can confirm the new value of the `Accept-Language` header via Chrome's **Dev Tools > Network** tab:
 
-![Confirming the Accept-Language HTTP Header](/images/testing-django-localization-chrome/accept-language.png)
+![Confirming the Accept-Language HTTP Header](images/accept-language.png)
 
 This is by far the most convenient way to visualize a Django site's localizations during local development. And best of all, I didn't have to make any changes to the Django codebase, so I know that what I'm seeing is what other users will see when the site goes live. That's all there is to it!
 

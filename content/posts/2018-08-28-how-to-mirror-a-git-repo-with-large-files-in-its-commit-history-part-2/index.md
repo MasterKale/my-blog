@@ -23,7 +23,7 @@ Running BFG was pretty simple. I used the flag that told it to prune any file la
 $> java -jar bfg-1.13.0.jar --strip-blobs-bigger-than 100M .git
 ```
 In seconds, BFG crawled through all commits leading up to HEAD and replaced any blob larger than 100M with a tiny plaintext file containing the git hash of the file itself:
-![Showing off BFG's file replacement of large files](/images/screen-shot-2018-08-23-at-5.03.48-pm.png)
+![Showing off BFG's file replacement of large files](images/screen-shot-2018-08-23-at-5.03.48-pm.png)
 Afterwards, BFG will ask you to run `git reflog expire --expire=now --all && git gc --prune=now --aggressive`. **DON'T DO THIS! **This will recreate _all_ commit IDs, making it impossible for the two repos to mirror each other since none of the commits will line up!
 Instead, to finish things up I ran just the garbage collection command:
 ```sh

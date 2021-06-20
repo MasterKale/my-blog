@@ -17,3 +17,5 @@ hasCode = false
 - Attestation always "none", even when "direct"
 - New transport: "cable"
 - No need to pair phone to computer
+
+![aaa](images/cable_authentication.png)
