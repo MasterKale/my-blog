@@ -5,8 +5,8 @@
   And don't try to do anything fancy like return <figure> again. Apparently it's not the intended
   use of this render hook. See https://github.com/gohugoio/hugo/issues/6748#issuecomment-821910875
 -->
-{{ $scaleWidth := 600}}
-{{ $scaleHeight := 400}}
+{{ $scaleWidth := 1800}}
+{{ $scaleHeight := 1200}}
 {{ $image := .Page.Resources.GetMatch .Destination }}
 {{ if or (gt $image.Width $scaleWidth) (gt $image.Height $scaleHeight) }}
   {{ $image = $image.Fit (printf "%dx%d" $scaleWidth $scaleHeight) }}
