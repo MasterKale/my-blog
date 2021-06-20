@@ -99,7 +99,7 @@ main {
       max-width: 100%;
       height: auto;
       display: block;
-      margin: 0 0 1rem;
+      margin: 0 auto 1rem;
       border-radius: 0.25rem;
       border: 1px solid safe-rgb(var(--text));
     }
@@ -186,6 +186,23 @@ ol.categories--list {
     display: inline-block;
     list-style: none;
     margin-right: 0.5rem;
+  }
+}
+
+a.click-for-big-image {
+  display: block;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  img {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "(click for full size)";
+    font-style: italic;
+    color: rgba(var(--emphasis), var(--alpha));
+    font-size: 0.75rem;
   }
 }
 

@@ -1,0 +1,18 @@
+<!--
+  Scale images to fit 600x400 when they're too big. If an image is scaled, wrap it in a link
+  that can be clicked to see the original image. Otherwise just render the image
+
+  And don't try to do anything fancy like return <figure> again. Apparently it's not the intended
+  use of this render hook. See https://github.com/gohugoio/hugo/issues/6748#issuecomment-821910875
+-->
+{{ $scaleWidth := 600}}
+{{ $scaleHeight := 400}}
+{{ $image := .Page.Resources.GetMatch .Destination }}
+{{ if or (gt $image.Width $scaleWidth) (gt $image.Height $scaleHeight) }}
+  {{ $image = $image.Fit (printf "%dx%d" $scaleWidth $scaleHeight) }}
+  <a class="click-for-big-image" href="{{ .Destination | safeURL }}" target="_blank">
+    <img src="{{ $image.RelPermalink }}" alt="{{ .Text }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" />
+  </a>
+{{ else }}
+  <img src="{{ $image.RelPermalink }}" alt="{{ .Text }}" width="{{ $image.Width }}" height="{{ $image.Height }}" loading="lazy" />
+{{ end }}
