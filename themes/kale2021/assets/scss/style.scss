@@ -15,6 +15,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-padding-top: 4rem;
 }
 
 *,
@@ -197,6 +198,10 @@ ol.categories--list {
 }
 
 @media screen and (max-width: 600px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+
   header {
     .content-column {
       flex-direction: column;
