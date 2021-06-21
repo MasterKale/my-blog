@@ -15,7 +15,7 @@ Fortunately for you I stumbled upon a free service called [**Formspree**](https:
 
 Formspree's premise is simple: whenever a visitor fills out and submits a `<form>` on your site, Formspree will email you a message containing whatever values were entered:
 
-![Formspree-generated email containg form values](/images/adding-email-to-static-sites-with-formspree/formspree-email.png)
+![Formspree-generated email containg form values](images/formspree-email.png)
 
 Integrating it into your site is as simple as adding `https://formspree.io/your@email.com` into your form's `action` attribute:
 
@@ -34,15 +34,15 @@ Integrating it into your site is as simple as adding `https://formspree.io/your@
 
 The next step is to confirm your email address. Fill out and submit your form once. You'll be taken to the Formspree website and asked to check your email:
 
-![Formspree Confirmation Message](/images/adding-email-to-static-sites-with-formspree/formspree-confirm.png)
+![Formspree Confirmation Message](images/formspree-confirm.png)
 
 In your inbox you'll find a confirmation e-mail like this one:
 
-![Formspree Confirmation Email](/images/adding-email-to-static-sites-with-formspree/formspree-confirm-email.png)
+![Formspree Confirmation Email](images/formspree-confirm-email.png)
 
 Just click the **Confirm Form** button and you're done! From this point on Formspree will send you an email every time the form is filled out:
 
-![Typical Formspree Email](/images/adding-email-to-static-sites-with-formspree/formspree-email.png)
+![Typical Formspree Email](images/formspree-email.png)
 
 There are some advanced features you can enable, including setting reply-to and CC addresses, email subject text, and a few more. Check out the Formspree site for more information: https://formspree.io/
 

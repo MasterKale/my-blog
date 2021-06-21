@@ -46,7 +46,7 @@ When you're finished, you'll end up with two files:
 
 Head to your [SSH and GPG keys](https://github.com/settings/keys) settings in Github and click **New SSH key**. Enter a value for the key's **Title**, like "security-key-name-uv.pub", then paste in the value of **/Users/you/.ssh/security-key-name-uv.pub** into the **Key** textbox:
 
-![screenshot of SSH keys / Add new screen with Title and Key populated](/images/add_key_to_github.jpg)
+![screenshot of SSH keys / Add new screen with Title and Key populated](images/add_key_to_github.jpg)
 
 Click **Add SSH key** to save the public key to your account.
 
