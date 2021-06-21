@@ -1,8 +1,8 @@
 +++
-title = "Previewing Chrome's WebAuthn support for caBLE v2"
+title = "Previewing Chrome's caBLE v2 support for WebAuthn"
 description = "Observations of Google's experiment with Android phones as WebAuthn authenticators"
 date = "2021-06-18T23:47:54.546Z"
-categories = ["webauthn"]
+categories = ["webauthn", "chrome", "android"]
 keywords = ["chrome", "android", "webauthn", "cable", "bluetooth"]
 hasCode = true
 +++
