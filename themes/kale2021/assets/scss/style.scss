@@ -93,11 +93,7 @@ header {
 main {
   line-height: 1.5rem;
   &.content-column {
-    // text-align: justify;
-
     img {
-      max-width: 100%;
-      height: auto;
       display: block;
       margin: 0 auto 1rem;
       border-radius: 0.25rem;
@@ -204,6 +200,16 @@ a.click-for-big-image {
     color: rgba(var(--emphasis), var(--alpha));
     font-size: 0.75rem;
   }
+}
+
+img.preview-landscape {
+  max-width: 90%;
+  height: auto;
+}
+
+img.preview-portrait {
+  max-height: 25rem;
+  width: auto;
 }
 
 @media (prefers-color-scheme: dark) {
