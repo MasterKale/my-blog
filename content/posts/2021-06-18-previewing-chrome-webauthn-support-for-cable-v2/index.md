@@ -7,9 +7,9 @@ keywords = ["chrome", "android", "webauthn", "cable", "bluetooth"]
 hasCode = true
 +++
 
-A [recent post in the fido-dev Google Group](https://groups.google.com/a/fidoalliance.org/g/fido-dev/c/go6GoFW27Dw/m/9flCLR5pBQAJ?pli=1) included steps for previewing work Google is doing with ["Cloud-assisted BLE" pairing, or caBLE v2](https://github.com/fido-alliance/fido-2-specs/pull/724). Briefly, Google is working on a way of pairing Android devices to bluetooth-equipped computers in a way that sidesteps the usual Bluetooth pairing process most of us suffer through when we pair our headphones to our laptops.
+A [recent post in the fido-dev Google Group](https://groups.google.com/a/fidoalliance.org/g/fido-dev/c/go6GoFW27Dw/m/9flCLR5pBQAJ?pli=1) included steps for previewing work Google is doing with ["cloud-assisted BLE" pairing, or caBLE](https://github.com/fido-alliance/fido-2-specs/pull/724). Briefly, Google is working on a way of pairing Android devices to bluetooth-equipped computers in a way that sidesteps the usual Bluetooth pairing process most of us suffer through when we pair our headphones to our laptops.
 
-The steps listed on the fido-dev post are specifically for testing out caBLE v2 in the context of WebAuthn. While the technology is still very much a WIP, it's built out enough to allow for WebAuthn registration and authentication ceremonies. I decided to take it out for a spin to see what kind of extra work, if any, RP devs might need to one day be aware of to implement support for this.
+The steps listed on the fido-dev post are specifically for testing out **caBLE v2** in the context of WebAuthn. While the technology is still very much a WIP, it's built out enough to allow for WebAuthn registration and authentication ceremonies. I decided to take it out for a spin to see what kind of extra work, if any, RP devs might need to one day be aware of to implement support for this.
 
 ## Setup
 
