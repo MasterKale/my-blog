@@ -50,7 +50,7 @@ Start the WebAuthn registration process as usual. No special registration option
 
 ![Chrome displaying a modal with a list of available authenticators for WebAuthn registration](images/chrome_authenticator_options.png)
 
-> NOTE: caBLE is a "cross-platform" authenticator attachment. It will **not** be available if `authenticatorSelection.authenticatorAttachment` is set to `"platform"` in registration options.
+> NOTE: caBLE is a "cross-platform" authenticator attachment. It will **not** be available if `authenticatorAttachment` is set to `"platform"` in registration options.
 
 Select "Pixel", at which point Chrome will instruct you to check your phone for a notification:
 
