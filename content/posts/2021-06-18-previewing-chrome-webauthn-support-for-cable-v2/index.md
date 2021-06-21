@@ -34,7 +34,7 @@ Setup instructions below are copied verbatim from the fido-dev post above:
 1. Install [Chrome Canary](https://www.google.com/chrome/canary/) (Or update to the latest version.)
 1. Navigate to **chrome://version** and ensure that the version is >= 93.0.4530.0
 1. Sign into the same account as the phone is syncing to, for example by going to [accounts.google.com](https://myaccount.google.com/).
-2. Select the account menu in Canary—a circular icon at the top right. If it doesn’t already indicate that Sync is enabled then click **"Turn on sync…"** and **"Yes I’m in"**.
+2. Select the account menu in Canary—a circular icon at the top right. If it doesn’t already indicate that Sync is enabled then click **"Turn on sync…"** and **"Yes I'm in"**.
 3. Open **chrome://flags** and search for **"cable"**.
 4. Enable **"Web Authentication caBLE v2 support"** and relaunch Canary with the button at the bottom.
 
