@@ -2,8 +2,8 @@
 title = "Supporting Hugo page bundles in Netlify CMS"
 description = "Update your collections definition with a couple new values and you're good to go"
 date = 2021-12-23T23:06:16.659Z
-categories = ["howto"]
-keywords = ["hugo", "netlifycms"]
+categories = ["howto", "hugo", "netlifycms"]
+keywords = ["hugo", "page bundles", "netlifycms"]
 hasCode = true
 draft = false
 +++
