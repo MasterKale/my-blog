@@ -15,7 +15,7 @@ collections:
     # Used in routes, e.g., /admin/collections/blog
   - name: "posts"
     # What to call items in the CMS
-    label: "Post"
+    label: "Posts"
     label_singular: "Post"
     # Where to store posts (relative to the project root)
     folder: "content/posts"
