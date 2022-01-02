@@ -1,7 +1,7 @@
 +++
 title = "Tales of Baby: The Lemon"
 description = "That one time she marveled at a grocery store lemon"
-date = 2022-01-02T06:50:47.580Z
+date = 2022-01-01T20:50:00.000Z
 categories = ["tales-of-baby"]
 keywords = []
 hasCode = false
