@@ -6,9 +6,7 @@
         <a href="{{ .RelPermalink }}" class="title">
           {{ .Title }}
         </a>
-        {{ if .Params.Completed }}
-          (Completed{{ if .Params.Platinum }}, Platinum{{ end }})
-        {{ end }}
+        {{ partial "metadata-gaming.html" . }}
       </li>
     {{ end }}
   </ol>
