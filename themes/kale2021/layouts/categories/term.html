@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h2><a href="/categories/">Category</a> &gt; {{ .Title }}</h2>
+  <h2><a href="/categories/">Categories</a> &gt; {{ .Title }}</h2>
   {{ range .Pages.ByPublishDate.Reverse }}
     {{ partial "post-summary.html" . }}
   {{end }}
