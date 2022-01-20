@@ -1,9 +1,10 @@
 +++
-title = "Guardians of the Galaxy (PS5)"
+title = "Guardians of the Galaxy"
 date = 2021-12-23T23:06:16.659Z
 gaming = 2022
+system = "PS5"
 completed = true
 platinum = false
 +++
 
-![Guardians of the Galaxy PS5 Boxart](images/boxart.jpg)
+![Boxart](images/boxart.jpg)
