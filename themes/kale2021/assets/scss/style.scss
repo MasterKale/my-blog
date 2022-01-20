@@ -210,6 +210,11 @@ img.preview-portrait {
   width: auto;
 }
 
+.gaming-single-meta li.system { list-style: "🎮 "; }
+.gaming-single-meta li.year { list-style: "🗓 "; }
+.gaming-single-meta li.completed { list-style: "✅ "; }
+.gaming-single-meta li.platinum { list-style: "🏅 "; }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: 171, 178, 191;
