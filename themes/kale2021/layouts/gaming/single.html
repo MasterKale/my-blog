@@ -1,7 +1,10 @@
 {{ define "main" }}
-  <h2>{{ .Title }}</h2>
+  <h2>
+    <a href="/gaming/">Games I Played</a> >
+    <a href="/gaming/{{ .Params.Gaming }}/">{{ .Params.Gaming }}</a> >
+    {{ .Title }}
+  </h2>
   <ul class="gaming-single-meta">
-    <li class="year">Year Played: {{ .Params.Gaming }}</li>
     <li class="system">System: {{ .Params.System }}</li>
     <li class="completed">Completed: {{ cond .Params.Completed "Yes" "No" }}</li>
     <li class="platinum">100% Achievements: {{ cond .Params.Platinum "Yes" "No" }}</li>
