@@ -1,6 +1,6 @@
 {{ define "main" }}
   <h2>Posts</h2>
-  {{ $posts := where .Site.Pages "Kind" "page" }}
+  {{ $posts := where .Site.RegularPages "Type" "posts" }}
   {{ range $posts.ByPublishDate.Reverse }}
     {{ partial "post-summary.html" . }}
   {{end }}
