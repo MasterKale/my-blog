@@ -1,7 +1,7 @@
 {{ define "main" }}
   <h2><a href="/gaming/">Games I Played</a> &gt; {{ .Title }}</h2>
   <ol>
-    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ range .Pages.ByPublishDate }}
       <li>
         <a href="{{ .RelPermalink }}" class="title">
           {{ .Title }}
