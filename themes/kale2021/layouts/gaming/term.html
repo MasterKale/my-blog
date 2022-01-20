@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h2><a href="/gaming/">Games I Played</a> &gt; {{ .Title }}</h2>
+  <ol>
+    {{ range .Pages.ByPublishDate.Reverse }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="title">
+          {{ .Title }}
+        </a>
+        {{ if .Params.Completed }}
+          (Completed{{ if .Params.Platinum }}, Platinum{{ end }})
+        {{ end }}
+      </li>
+    {{ end }}
+  </ol>
+{{ end }}

@@ -47,7 +47,8 @@
     "urlTwitter": "https://twitter.com/IAmKale"
   },
   "taxonomies": {
-    "categories": "categories"
+    "categories": "categories",
+    "gaming": "gaming"
   },
   "markup": {
     "goldmark": {

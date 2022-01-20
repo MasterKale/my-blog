@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <h2>Games I Played By Year</h2>
+  <ol class="categories--list">
+    {{ range sort .Site.Taxonomies.gaming.Alphabetical.Reverse }}
+      <li>
+        <a href="{{ .Page.Permalink }}" class="category--title">{{ .Page.Title }}</a>
+        <span class="category--count">({{ .Count }})</span>
+      </li>
+    {{end }}
+  </ol>
+{{ end }}
