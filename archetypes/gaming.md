@@ -6,3 +6,11 @@ system = "PS5|PC|Xbox"
 completed = false
 platinum = false
 +++
+
+![Boxart](images/boxart.jpg)
+
+## Notes
+
+...
+
+![Trophy list showing __% of trophies earned](images/trophies.jpg)
