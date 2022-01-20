@@ -10,6 +10,12 @@ parser = argparse.ArgumentParser(
     description="A simple script for generating new blog posts with Hugo."
 )
 parser.add_argument(
+    "--archetype",
+    choices=["posts", "gaming"],
+    default="posts",
+    help="The type of content to create"
+)
+parser.add_argument(
     "title",
     nargs="+",
     help="The title of the new post. Example: \"A new post\""
@@ -32,11 +38,21 @@ title = ' '.join(args.title)
 Prepare the date variables for the path
 """
 today = date.today()
-# Create the path as "posts/2021-05-14-title-goes-here"
-path = "posts/{}-{}/index.md".format(
-    today.strftime("%Y-%m-%d"),
-    folder_name,
-)
+
+if args.archetype == "posts":
+    # Create the path as "posts/2021-05-14-title-goes-here"
+    path = "posts/{}-{}/index.md".format(
+        today.strftime("%Y-%m-%d"),
+        folder_name,
+    )
+elif args.archetype == "gaming":
+    # Create the path as "posts/2021-05-14-title-goes-here"
+    path = "gaming/{}/{}/index.md".format(
+        today.strftime("%Y"),
+        folder_name,
+    )
+else:
+    raise Exception(f"Unexpected content type {args.content}")
 
 """
 Execute the Hugo command
