@@ -19,14 +19,14 @@ collections:
     label_singular: "Post"
     # Where to store posts (relative to the project root)
     folder: "content/posts"
+    # The filename slug to use when saving posts
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     # Support Hugo page bundles that puts index.md and images in folders named by slug
     path: "{{slug}}/index"
     media_folder: "images"
     public_folder: "images"
     # Allow for posts to be created in the CMS
     create: true
-    # The filename slug to use when saving posts
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     # Save posts with .md extension
     extension: "md"
     # Use TOML frontmatter (delimiter: +++)
