@@ -40,13 +40,13 @@ Prepare the date variables for the path
 today = date.today()
 
 if args.archetype == "posts":
-    # Create the path as "posts/2021-05-14-title-goes-here"
+    # Create the path as "posts/2021-05-14-title-goes-here/index.md"
     path = "posts/{}-{}/index.md".format(
         today.strftime("%Y-%m-%d"),
         folder_name,
     )
 elif args.archetype == "gaming":
-    # Create the path as "posts/2021-05-14-title-goes-here"
+    # Create the path as "gaming/2022/title-goes-here/index.md"
     path = "gaming/{}/{}/index.md".format(
         today.strftime("%Y"),
         folder_name,
