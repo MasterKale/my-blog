@@ -55,17 +55,8 @@ The reverse of all of this was true too - if I cleared synced platform credentia
 
 ## Closing Thoughts
 
-All in all I have to say I'm pretty excited for passkeys. I think it's a great solution for WebAuthn account recovery, since now it's as simple as signing into your iCloud account on a new device to regain access to all of your credentials. The fact that the synchronization happens automatically is a huge convenience win for users too since there's nothing to think about.
+I have to say I'm pretty excited for these passkeys. I think it's a great solution for WebAuthn account recovery since now it's as simple as signing into my iCloud account on a new device to regain access to all of my credentials. The fact that the synchronization happens automatically is a huge convenience win too since there's nothing to think about.
 
 I *had* hoped this would mean the end of browser-specific credential stores on macOS for an OS-level store like on iOS, but alas, Apple seems to be keeping this exclusive to macOS Safari for now.
 
-Speaking to RP devs for a moment: passkeys in general will largely be transparent to current implementations of WebAuthn. Upcoming additions to L3 of the WebAuthn spec, like [additional authData flags indicating backup state](https://github.com/w3c/webauthn/pull/1695) and [a new `devicePubKey` extension ](https://github.com/w3c/webauthn/pull/1663), will eventually help RPs maintain the "single-device" aspect of pre-passkey WebAuthn credentials.
-
-If Apple goes live with passkeys later this year then most RPs will start receiving multi-device credentials before they are (read: can be) aware of it. I don't think this is worth worrying about because of the high level of security of the various platforms' syncing fabrics. Not to mention how it'll potentially decrease customer support requests by users who were locked out of their WebAuthn-protected accounts because they traded in or lost their phone.
-
-Some final bits of passkey trivia:
-
-- **Technically speaking a "passkey" is a "multi-device credential".** This means it's available for use on multiple machines through some kind of backup/sync/export mechanism that is outside the scope of WebAuthn. Credentials generated prior to the launch of any one passkey solution *or* via the upcoming `devicePubKey` extension can be referred to as a "single-device credential"; this asserts that the credential is bound to the piece of hardware that generated it.
-- **Passkeys imply discoverable credentials 100% of the time.** This means that, during a WebAuthn authentication ceremony, `allowCredentials` can contain a list of credential IDs, or can be an empty array to signal to the browser that it should prompt the user to choose a credential to log in with.
-- **Passkeys will most likely be locked to specific platforms.** Since the major platform vendors (Microsoft, Google, Apple) are using their respective clouds to sync credentials between devices it's unlikely we'll see a _single_ passkey be usable across every device. I think best case scenario, if passkeys see wide adoption, is that RPs will "only" need to keep track of up to three passkeys per user. Time will tell if this ends up being the case, or if something else comes out to simplify things even more.
-  - Will [Google's caBLE v2]({{< ref "../2021-06-18-previewing-chrome-webauthn-support-for-cable-v2" >}}) change this arithmetic? Perhaps it'll let us get down to two: Apple's that is usable across iOS and macOS, and an Android-based passkey that can auth on both Windows and Android. Could we achieve "a single passkey across all platforms" if everyone agreed to support caBLE v2...? 🤔
+All in all I'm looking forward to whenever Apple goes live with this feature, it seems great for us end users 🥳
