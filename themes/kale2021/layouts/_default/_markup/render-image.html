@@ -1,12 +1,12 @@
 <!--
-  Scale images to fit 600x400 when they're too big. If an image is scaled, wrap it in a link
-  that can be clicked to see the original image. Otherwise just render the image
+  Scale images to fit a 3:2 aspect ratio when they're too big. If an image is scaled, wrap it in a link
+  that can be clicked on to see the original image. Otherwise just render the image.
 
   And don't try to do anything fancy like return <figure> again. Apparently it's not the intended
   use of this render hook. See https://github.com/gohugoio/hugo/issues/6748#issuecomment-821910875
 -->
-{{ $scaleWidth := 1800}}
-{{ $scaleHeight := 1200}}
+{{ $scaleWidth := 900}}
+{{ $scaleHeight := 600}}
 {{ $image := .Page.Resources.GetMatch .Destination }}
 {{ $scaleClass := "preview-landscape" }}
 {{ if lt (div $image.Width $image.Height) 1 }}
