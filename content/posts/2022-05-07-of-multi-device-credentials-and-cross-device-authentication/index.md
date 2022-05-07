@@ -13,7 +13,7 @@ On May 5th, 2022 the FIDO Alliance coopted World Password Day ([created by Intel
 
 Headlining this tongue-in-cheek reveal was the actually interesting announcement that **Apple, Google, and Microsoft were all committing to support multi-device credentials and cross-device authentication within the next year!** Somehow the FIDO Alliance had figured out how to get [the big three platform vendors to publicly signal intent](https://fidoalliance.org/world-password-day-had-a-good-run-now-were-celebrating-a-future-with-less-passwords/) to support these upcoming additions to the WebAuthn spec, and all of a sudden a standards-based passwordless future seemed closer than ever.
 
-As a bit of a refresher, back in March 2022 the FIDO Alliance released [a whitepaper on the concept of "multi-device FIDO credentials"](https://fidoalliance.org/white-paper-multi-device-fido-credentials/). This document outlined a strategy for FIDO authenticator vendors to enhance their devices with capabilities that would allow credentials to survive device loss.
+As a bit of a refresher, back in March 2022 the FIDO Alliance released [a whitepaper on the concept of "multi-device FIDO credentials"](https://fidoalliance.org/white-paper-multi-device-fido-credentials/). This document outlined a strategy for FIDO authenticator vendors to enhance their devices with capabilities that would allow credentials to survive device loss:
 
 > In other words, if the user had set up a number of FIDO credentials for different relying parties on their phone, and then got a new phone, that user should be able to expect that all their FIDO credentials will be available on their new phone.
 >
@@ -26,7 +26,7 @@ This is great and all, but there's one particular detail in this whitepaper that
 > Syncing FIDO credentials’ cryptographic keys between devices may not always be possible, for example if the user is using a new device from a different vendor, which doesn’t sync with the user’s other existing
 > devices.
 
-Indeed, **one early downside of the first iteration of multi-device credentials is that they'll only be synchronized within the same ecosystem.** For example, Android and Chrome OS credentials would only sync to other Android and Chrome OS devices using the same Google account, while iOS and macOS credentials would be restricted to other iOS and macOS devices on which a user was logged into their iCloud account.
+Indeed, **one early downside of the first iteration of multi-device credentials is that they'll only be synchronized within the same ecosystem.** For example, Android and Chrome OS credentials will only sync to other Android and Chrome OS devices using the same Google account, while iOS and macOS credentials will be restricted to other iOS and macOS devices on which a user was logged into their iCloud account.
 
 Statements that a multi-device credential, "works across all devices, whether you're running iOS, Android, or Windows, and across all Apple, Google, or Microsoft services" are too ambiguous; they give readers the false impression that they'll be able to create a WebAuthn credential on a website on iOS, and then turn around and immediately authenticate on Windows with that credential some how "synchronized" to be used with Windows Hello. The truth is we're not anywhere near that, not yet anyway, and people should set their expectations accordingly.
 
