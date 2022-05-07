@@ -21,7 +21,7 @@ As a bit of a refresher, back in March 2022 the FIDO Alliance released [a whitep
 >
 > For these multi-device FIDO credentials, it is the OS platform’s responsibility to ensure that the credentials are available where the user needs them...Just like password managers do with passwords, the underlying OS platform will “sync” the cryptographic keys that belong to a FIDO credential from device to device.
 
-This is great and all, but there's one particular detail in this whitepaper that I'm seeing [some tech blogs](https://www.theverge.com/2022/5/5/23057646/apple-google-microsoft-passwordless-sign-in-fido) [miss out on](https://arstechnica.com/information-technology/2022/05/how-apple-google-and-microsoft-will-kill-passwords-and-phishing-in-1-stroke/) as they strive to analyze these recent announcements and make sense of it all:
+This is great and all, but there's one particular detail in this whitepaper that I'm seeing some tech blogs miss out on as they strive to analyze these recent announcements and make sense of it all:
 
 > Syncing FIDO credentials’ cryptographic keys between devices may not always be possible, for example if the user is using a new device from a different vendor, which doesn’t sync with the user’s other existing
 > devices.
@@ -34,4 +34,4 @@ The silver lining to all the above is that **cross-platform authentication** sup
 
 Also worth clarifying is that it's not to say that "cross-platform authentication" will always refer to "caBLE authentication". Rather the door is now open for Apple, Google, Microsoft, and other authenticator vendors to create new means of cross-platform authentication in the future, which can then be almost immediately supported by RPs with spec-compliant implementations of WebAuthn.
 
-Hopefully this helps set the record straight for now. Exciting new things are in store for WebAuthn, and I for one can't wait to help play my part in getting us all to a passwordless future!
+Hopefully this helps set the record straight...for now. Suffice to say exciting new things are in store for WebAuthn, and I'll keep doing my part in helping get us all to a passwordless future!
