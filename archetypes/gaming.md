@@ -13,6 +13,4 @@ name = "featured"
 
 ## Notes
 
-...
-
-![Trophy list showing __% of trophies earned](images/trophies.jpg)
+Start writing here...
