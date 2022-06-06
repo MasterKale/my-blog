@@ -11,8 +11,6 @@ src = "images/boxart.jpg"
 name = "featured"
 +++
 
-![Boxart](images/boxart.jpg)
-
 ## Notes
 
 ...

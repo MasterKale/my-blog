@@ -10,6 +10,7 @@ platinum = false
 src = "images/boxart.jpg"
 name = "featured"
 +++
-![box art](images/kena.jpg)
+
+## Notes
 
 Playthrough in progress...

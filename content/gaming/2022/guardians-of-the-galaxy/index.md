@@ -11,8 +11,6 @@ src = "images/boxart.jpg"
 name = "featured"
 +++
 
-![Boxart](images/boxart.jpg)
-
 I enjoyed the heck out of this game! The writing in particular was fantastic. Believable character development, Telltale-light consequences of my actions bearing fruit later, and a great sense of travel across the galaxy all came together to create a unique game that I encourage you to try. The level of detail in all of the maps was surprisingly high and made for gorgeous vistas. And in addition to collectibles and character skins giving me plenty of reasons to go off the beaten path, I was often surprised to hear barks from team members chastising me for "getting lost". These lines made the characters feel more alive and helped get me a bit more invested in the fate of the team.
 
 Combat was the relatively weakest aspect of the game, but there wasn't anything about it that got in the way of my overall enjoyment of the experience. I'd give the game a solid 8 out of 10.

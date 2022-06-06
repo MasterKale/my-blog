@@ -11,8 +11,6 @@ src = "images/boxart.jpg"
 name = "featured"
 +++
 
-![Boxart](images/boxart.jpg)
-
 ## Notes
 
 For better or for worse this is more of Horizon Zero Dawn...but with a few new gameplay mechanics and a *way* crazier storyline than the first allowed. Overall the mechanics seem very similar to the first game: buy gadgets, hunt beasts for items to upgrade, and occasionally pick up some new duds. I don't remember a leveling up system for the armor, so that seems new, though it may just be it's been that long since I last played HZD.

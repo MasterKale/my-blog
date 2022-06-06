@@ -11,8 +11,6 @@ src = "images/boxart.jpg"
 name = "featured"
 +++
 
-![Boxart](images/boxart.jpg)
-
 ## Notes
 
 My initial reaction to this game, from previews to launch, was "ah, another FromSoft game in the vein of Dark Souls? *Pass.*" The hype around this game was just too much, though, that I couldn't ignore it anymore. After seeing it take over gaming Twitter, YouTube, and Twitch, and it blowing up my RSS feeds, reports of a vastly more accessible entry in the Soulsborne genre got my curious.
