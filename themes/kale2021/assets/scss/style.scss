@@ -214,6 +214,15 @@ img.preview-portrait {
 .gaming-single-meta li.completed { list-style: "✅ "; }
 .gaming-single-meta li.platinum { list-style: "🏅 "; }
 
+.gaming-single-description {
+  font-style: italic;
+  color: rgba(var(--text), var(--alpha));
+  font-size: 0.75rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: 171, 178, 191;

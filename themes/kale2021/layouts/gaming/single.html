@@ -9,5 +9,10 @@
     <li class="completed">Completed: {{ cond .Params.Completed "Yes" "No" }}</li>
     <li class="platinum">100% Achievements: {{ cond .Params.Platinum "Yes" "No" }}</li>
   </ul>
+  {{ $boxartDescription := .Params.description }}
+  {{ with .Resources.GetMatch "featured" }}
+  <img src="{{ .RelPermalink }}" alt="{{ $boxartDescription }}" class="preview-landscape" width="764" height="430">
+  {{ end }}
+  <p class="gaming-single-description">{{ $boxartDescription }}</p>
   {{ .Content }}
 {{ end }}
