@@ -13,15 +13,15 @@ name = "featured"
 
 ## Notes
 
-My initial reaction to this game, from previews to launch, was "ah, another FromSoft game in the vein of Dark Souls? *Pass.*" The hype around this game was just too much, though, that I couldn't ignore it anymore. After seeing it take over gaming Twitter, YouTube, and Twitch, and it blowing up my RSS feeds, reports of a vastly more accessible entry in the Soulsborne genre got my curious.
+My initial reaction to this game, from previews to launch, was "ah, another FromSoft game in the vein of Dark Souls? *Pass.*" The hype around this game was just too much, though, that I couldn't ignore it anymore. After seeing it take over gaming Twitter, YouTube, and Twitch, and it blowing up my RSS feeds, reports of a vastly more accessible entry in the Soulsborne genre got me curious.
 
-After some hemming and hawing I decided to set down [Horizon Forbidden West]({{< ref "horizon-forbidden-west" >}}) and give Elden Ring a try. Boy, have this game gripped me in a way I'd never have predicted.
+So after some hemming and hawing I decided to set aside [Horizon Forbidden West]({{< ref "horizon-forbidden-west" >}}) and give Elden Ring a try. Boy, has this game gripped me in a way that I'd never have predicted.
 
-Suffice to say it's been nearly 100 hours now and, three months later, it's literally the only game I've been playing. There's just way too much content! Catacombs, "legacy dungeons", puzzles, a world map that just keeps growing and growing and growing...for the longest time just when I'd thought I'd seen it all I finally find the next map piece and realize, damn, I still don't know what's over on that remaining big greyed out chunk.
+It's been nearly 100 hours now and, three months later, it's literally the only game I've been playing. There's just way too much content! Catacombs, "legacy dungeons", puzzles, a world map that just keeps growing and growing and growing...just when I'd thought I'd seen it all I'd find the next map piece and, damn, I still don't know what's over on that remaining big greyed out chunk.
 
 I won't turn this into a typical review of the game; those are easy enough to find. Instead here's a bit about my specific journey:
 
-- I wanted to experience the story, so I rolled an INT character, a.k.a. a mage. Being able to shoot at things from far away worked well to keep me out of harms way in the first couple dozen hours, and allowed me to explore the world to my heart's content. I initially alternated between magic and melee, with a shield in my offhand as a constant companion. Around hour 80 I experimented with and then grew comfortable enough (and powerful enough) to keep my staff in my left hand and a mace + Moonblade in my right. At just over 60 INT and 23 DEX I pack enough of a punch to continue plumbing the depths of the game. At the time of this writing I've discovered all of the map and am currently trying to figure out how to make it to the Hellig Tree. I've also got the Ashen Capital to explore now...
+- I wanted to experience the story, so I rolled an INT character, a.k.a. a mage. Being able to shoot at things from far away worked well to keep me out of harms way in the first couple dozen hours, and allowed me to explore the world to my heart's content. I initially alternated between magic and melee, with a shield in my offhand as a constant companion. Around hour 80 I experimented with and then grew comfortable enough (and powerful enough) to keep my staff in my left hand, and switch between Mace and Moonblade in my right. At level 112, with just over 60 INT and 23 DEX, I pack enough of a punch to continue plumbing the depths of the game: at the time of this writing I've discovered all of the map and am currently trying to figure out how to make it to the Hellig Tree. I've also got to properly explore the Ashen Capital...
 
 ![Still not sure what's going on with these little guys. They remind me of Bloodborne...](images/IMG_1984.jpg)
 
