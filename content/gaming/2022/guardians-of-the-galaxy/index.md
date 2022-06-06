@@ -1,6 +1,7 @@
 +++
 title = "Guardians of the Galaxy"
 date = 2022-01-01T23:06:16.659Z
+description = "RODENTS. IN. SPAAAAACE."
 gaming = 2022
 system = "PS5"
 completed = true

@@ -1,6 +1,7 @@
 +++
 title = "Horizon Forbidden West"
 date = "2022-02-28T02:18:48.995Z"
+description = "That's almost too much detail on that skin texture, Guerrilla Games..."
 gaming = 2022
 system = "PS5"
 completed = false

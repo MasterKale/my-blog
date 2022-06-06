@@ -1,6 +1,7 @@
 +++
 title = "Elden Ring"
 date = "2022-03-09T02:39:37.442Z"
+description = "\"Umm actually they're called runes not souls\""
 gaming = 2022
 system = "PS5"
 completed = false
