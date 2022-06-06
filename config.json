@@ -64,5 +64,17 @@
     "highlight": {
       "codeFences": false
     }
+  },
+  "security": {
+    "funcs": {
+      "getenv": [
+        "TITLE"
+      ]
+    },
+    "exec": {
+      "allow": [
+        "^code$"
+      ]
+    }
   }
 }
