@@ -1,7 +1,7 @@
 +++
 title = "WWDC 2022: Meet passkeys"
 date = "2022-06-10T04:19:19.958Z"
-description = "Apple reveals how passkeys have evolved since WWDC 2021"
+description = "Apple reveals how passkeys have evolved over the last year to offer the majority of us on the internet easy access to enhanced account security...with some caveats for larger Relying Parties."
 categories = ["webauthn", "ios", "macos"]
 keywords = ["webauthn", "passkeys", "apple", "ios", "macos"]
 hasCode = true
