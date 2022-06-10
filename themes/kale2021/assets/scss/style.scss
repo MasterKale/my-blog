@@ -96,6 +96,9 @@ main {
     img {
       display: block;
       margin: 0 auto 1rem;
+    }
+
+    code.hljs, img {
       border-radius: 0.25rem;
       border: 1px solid safe-rgb(var(--text));
     }
