@@ -165,6 +165,35 @@ footer {
 
 .metadata {
   color: rgba(var(--text), var(--alpha));
+
+  .reading-time {
+    &:after {
+      content: " ";
+    }
+  }
+
+  .categories {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    // margin-left:  1em;
+
+    &:before {
+      content: "(";
+    }
+
+    &:after {
+      content: ")";
+    }
+
+    li {
+      display: inline;
+
+    }
+    li + li:before {
+      content: ", ";
+    }
+  }
 }
 
 .category--count {
