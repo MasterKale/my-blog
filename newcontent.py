@@ -4,6 +4,14 @@ import argparse
 from datetime import date
 
 """
+A simple script to quickly create new content with a specific archetype.
+
+Example:
+./newcontent.py A New Blog Post
+./newcontent.py --archetype gaming God of War 2018
+"""
+
+"""
 Prepare a parser to simplify reading in commandline arguments
 """
 parser = argparse.ArgumentParser(
