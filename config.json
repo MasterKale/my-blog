@@ -39,7 +39,7 @@
     ]
   },
   "permalinks": {
-    "posts": "/:year/:month/:day/:title/"
+    "posts": "/:year/:month/:day/:slug/"
   },
   "rssLink": "index.xml",
   "params": {
