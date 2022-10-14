@@ -11,3 +11,7 @@ I'm all about improving the developer experience. Case in point, my [SimpleWebAu
 I also give talks to other developers on things like [GraphQL](https://cnc-graphql.millerti.me/#/) and [WebAuthn](https://jsla-webauthn.millerti.me/#/) to advocate for new technologies.
 
 When I'm not [blogging](/) or [working on open-source](https://github.com/MasterKale), I'm probably [gaming](/gaming/). If you want to contact me just hit me up at any of the links below 👇
+
+## "Matt's Headroom"?
+
+![Matt Headroom](matt-headroom-small.jpg)

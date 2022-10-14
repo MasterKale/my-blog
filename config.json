@@ -1,7 +1,7 @@
 {
   "baseURL": "https://blog.millerti.me",
   "languageCode": "en-us",
-  "title": "MillerTi.me",
+  "title": "Matt's Headroom",
   "author": {
     "name": "Matthew Miller"
   },
@@ -43,7 +43,7 @@
   },
   "rssLink": "index.xml",
   "params": {
-    "title": "MillerTi.me Blog",
+    "title": "Matt's Headroom",
     "description": "Notes for my future self",
     "images": [
       "/matt-headroom.jpg"
