@@ -1,7 +1,8 @@
 +++
-title = "Apple passkeys out in the wild"
+title = "A review of Apple's passkeys implementation"
+slug = "apple-passkeys-out-in-the-wild"
 date = "2022-10-12T17:19:23.586Z"
-description = "Some observations on Apple passkeys now that they've launched"
+description = "Some observations on passkeys in Apple's ecosystem now that they've launched"
 categories = ["webauthn", "ios", "macos", "safari"]
 keywords = ["apple", "passkeys"]
 hasCode = true
