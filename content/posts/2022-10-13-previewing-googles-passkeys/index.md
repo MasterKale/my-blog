@@ -81,7 +81,17 @@ I have it on good authority that RP's can begin to experiment with DPK support s
 
 ![Chrome Canary showing the enabled feature flag](images/chrome_canary_dpk_ff.png)
 
-Despite a few attempts I was never able to get back a device public key. I'll update this section with more info if/when I can get it working.
+~~Despite a few attempts I was never able to get back a device public key. I'll update this section with more info if/when I can get it working.~~
+
+[Google's own Adam Langley](https://www.imperialviolet.org/) helped clarify that I needed to turn on the feature flag in Chrome Canary **and then perform hybrid registration/authentication using my Android device!** Once I started using hybrid auth I had no problem requesting and receiving DPKs.
+
+**Request Options:**
+
+![WebAuthn options that include a basic request for the devicePubKey extension](images/android_dpk_request.png)
+
+**Authenticator Response:**
+
+![A credential response showing a successful device public key return value from a hybrid auth](images/android_dpk_response.png)
 
 ## Android visual review
 
