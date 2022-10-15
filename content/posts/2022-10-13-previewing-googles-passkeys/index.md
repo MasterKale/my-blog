@@ -9,7 +9,9 @@ hasCode = false
 
 On October 12, 2022 [Google announced the availability of a beta version of their upcoming passkeys implementation](https://android-developers.googleblog.com/2022/10/bringing-passkeys-to-android-and-chrome.html). This included instructions for [opting-in to a beta version of Google Play Services](https://developers.google.com/android/guides/beta-program), as well as announcing the availability of [Chrome Canary 108](https://www.google.com/chrome/canary/) with better default support for Conditional UI (i.e. there's no more need to start Chrome Canary with the `WebAuthenticationConditionalUI` feature flag.)
 
-In typical fashion I dive into the new functionality as best I can and try to pull out insights to common questions that I, especially as a Relying Party (RP) developer at my day job, need to answer in order to best support this next wave of passkey implementation. I want to emphasize that **what I write about below is specific to Google's "ecosystem"**; it's the differences between ecosystems that are more noteworthy than their similarities.
+In typical fashion I dove into the new functionality as best I could to try to pull out insights to common questions that I, especially as a Relying Party (RP) developer at my day job, will need to answer in order to best support this next wave of passkey implementation.
+
+> NOTE: I want to emphasize that **what I write about below is specific to Google's "ecosystem"**; it's the differences between ecosystems that are more noteworthy than their similarities.
 
 By the way, below I'll often mention `be`. This is an abbreviation of "backup-eligible", in reference to the corresponding flag in authenticator data that indicates a credential's ability to be used on other devices. A `be` flag set to `true` is an easy indicator that a credential is a passkey.
 
