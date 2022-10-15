@@ -65,9 +65,7 @@ So far there are two remaining issues with passkeys in iOS and macOS Ventura:
 
 Attempting to trigger a modal UI auth after initializing conditional UI in the background will raise a `NotAllowedError` **on the modal UI attempt** when you try to abort the first conditional UI call. However the OS will go ahead and prompt you for a WebAuthn interaction anyway; the `Promise` returned from the modal UI `navigator.credentials.get()` call will never resolve with a credential, though, because it's already been rejected.
 
-I prepared a basic recreation of the issue over on GitHub: https://github.com/MasterKale/SimpleWebAuthn/discussions/282#discussioncomment-3789634
-
-I ended up submitting feedback to Apple on October 2, 2022 about this as **FB11639511**.
+I prepared a basic [recreation of the issue over on GitHub](https://github.com/MasterKale/SimpleWebAuthn/discussions/282#discussioncomment-3789634), which was then submitted as feedback to Apple on October 2, 2022 about this as **FB11639511**.
 
 ### macOS Ventura (Beta 8)
 

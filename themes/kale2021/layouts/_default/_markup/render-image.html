@@ -10,9 +10,11 @@
 {{ $image := .Page.Resources.GetMatch .Destination }}
 {{ $image_ext := path.Ext $image }}
 {{ $scaleClass := "preview-landscape" }}
-{{ if lt (div $image.Width $image.Height) 1 }}
+<!-- `div` will calculate floats if at least one of the numbers is a float, hence the `mul` by 1.0 -->
+{{ if lt (div (mul $image.Width 1.0) $image.Height) 0.90 }}
 {{ $scaleClass = "preview-portrait" }}
 {{ end }}
+<!-- Scale still images, but leave gifs as-is so they animate on the page -->
 {{ if and (or (gt $image.Width $scaleWidth) (gt $image.Height $scaleHeight)) (ne $image_ext ".gif") }}
   {{ $image = $image.Fit (printf "%dx%d" $scaleWidth $scaleHeight) }}
   <a class="click-for-big-image" href="{{ .Destination | safeURL }}" target="_blank">
