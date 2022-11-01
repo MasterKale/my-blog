@@ -4,3 +4,4 @@ public/
 hugo
 .DS_Store
 resources/_gen/
+venv/
