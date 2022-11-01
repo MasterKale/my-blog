@@ -5,3 +5,4 @@ hugo
 .DS_Store
 resources/_gen/
 venv/
+.hugo_build.lock
