@@ -1,0 +1,1 @@
+./hugo server --bind 0.0.0.0 --minify --baseURL https://my-blog.iamkale.repl.co --port 443
