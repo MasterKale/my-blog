@@ -15,4 +15,4 @@ Start writing here...
 
 **Final trophy count: __ of __**
 
-![Trophy List]()
+![Trophy List](images/trophies.jpg)
