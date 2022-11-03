@@ -11,6 +11,8 @@ src = "images/boxart.jpg"
 name = "featured"
 +++
 
-## Notes
-
 Start writing here...
+
+**Final trophy count: __ of __**
+
+![Trophy List]()
