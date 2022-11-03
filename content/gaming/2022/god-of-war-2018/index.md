@@ -21,4 +21,6 @@ The one part of the game I disliked were those dang Valkyrie fights at the end. 
 
 Lastly, the one thing I regret was waiting so long to play. [At least now I won't have to wait long till the sequel](https://store.playstation.com/en-us/product/UP9000-CUSA34384_00-GOWRAGNAROK00000)!
 
+**Final trophy count: 28 of 37**
+
 ![Trophy List](images/trophies.jpg)
