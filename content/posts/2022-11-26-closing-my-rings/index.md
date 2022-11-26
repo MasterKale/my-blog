@@ -11,7 +11,7 @@ A year ago today, for no real reason I thought, "can I close all three rings on 
 
 ![apple watch screenshot showing a 365 days move streak](images/move_streak.png)
 
-365 days later, the answer is, "yes, I can!" 🥳
+365 days later, on November 22 2022, the answer is, "yes, I can!" 🥳
 
 ![a scroll through of a calendar view of an entire year of all rings closed daily](images/twelve_months.gif)
 
