@@ -1,10 +1,20 @@
 <footer>
   <p>
-    GitHub: <a href="{{ .Site.Params.urlGitHub }}" target="_blank" rel="noopener noreferrer">
+    GitHub:
+    <a
+      href="{{ .Site.Params.urlGitHub }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       MasterKale
     </a>
-    | Twitter: <a href="{{ .Site.Params.urlTwitter }}" target="_blank" rel="noopener noreferrer">
-      @IAmKale
+    | Mastodon:
+    <a
+      href="{{ .Site.Params.urlMastodon }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      @iamkale@infosec.exchange
     </a>
   </p>
   Copyright &copy; {{ now.Format "2006" }} {{ .Site.Author.name }}
