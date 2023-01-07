@@ -2,10 +2,15 @@
   <h2><a href="/gaming/">Games I Played</a> &gt; {{ .Title }}</h2>
   <ol>
     {{ range .Pages.ByPublishDate }}
+      {{ $wordcount := print .Content | countwords }}
       <li>
+      {{ if gt $wordcount 0 }}
         <a href="{{ .RelPermalink }}" class="title">
           {{ .Title }}
         </a>
+      {{ else }}
+        {{ .Title }}
+      {{ end }}
         {{ partial "metadata-gaming.html" . }}
       </li>
     {{ end }}
