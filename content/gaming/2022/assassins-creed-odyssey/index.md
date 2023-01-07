@@ -11,7 +11,7 @@ src = "images/boxart.jpg"
 name = "featured"
 +++
 
-Playthrough in progress...
+<!-- Playthrough in progress... -->
 
 <!-- **Final trophy count: __ of __** -->
 

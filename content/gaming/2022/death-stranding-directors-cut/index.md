@@ -1,5 +1,5 @@
 +++
-title = "Death Stranding Directors Cut"
+title = "Death Stranding Director's Cut"
 date = "2023-01-06T03:41:04.506Z"
 description = ""
 gaming = 2022

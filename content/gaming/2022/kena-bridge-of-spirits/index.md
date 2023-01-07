@@ -10,7 +10,7 @@ platinum = false
 src = "images/boxart.jpg"
 name = "featured"
 +++
-
+<!--
 ## Notes
 
-Playthrough in progress...
+Playthrough in progress... -->
