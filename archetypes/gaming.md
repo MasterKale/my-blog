@@ -3,7 +3,7 @@ title = "{{ getenv "TITLE" }}"
 date = "{{ now.UTC.Format "2006-01-02T15:04:05.000Z" }}"
 description = ""
 gaming = {{ now.UTC.Format "2006" }}
-system = "PS5|PC|Xbox"
+system = "PS5|PC|Switch"
 completed = false
 platinum = false
 [[resources]]
