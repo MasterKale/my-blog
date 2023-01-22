@@ -221,3 +221,9 @@ Here's a screenshot of Chrome Canary after I wired all of this up into my [Simpl
 - **Never forget the initialization vector** (`iv` in the code above) that you used to encrypt your data! I've learned it's not a secret, though, so it can be safely transported with the encrypted data for later decryption.
 - I protected a simple UTF-8 string in the example above, but the encryption and decryption **should work fine over any arbitrary bytes.**
 - There isn't anything preventing platform authenticators from supporting `prf`, but I haven't found one that does yet. I'll update this post if/when any start supporting it.
+
+## In Conclusion
+
+So there you have it, data encryption using WebAuthn. I'm excited by the possibilities this brings to websites, and I know that it's just a matter of time before others find novel ways to apply this technique to strongly protect your secrets.
+
+And heck, now that I've written this I might just try to creating something novel with `prf` too...
