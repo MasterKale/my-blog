@@ -17,11 +17,11 @@ I'm happy to report that my "crazy idea" has become a reality. And even better, 
 
 ## A summary of the `prf` WebAuthn extension
 
-Briefly, `prf` passes bytes from the Relying Party to the authenticator during a WebAuthn authentication ceremony. The authenticator hashes these bytes with secret bytes internally associated with a previously registered credential (as per[ CTAP's `hmac-secret` extension](https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-hmac-secret-extension)) and returns the resulting bytes to the browser in the output from `navigator.credentials.get()`.
+Briefly, `prf` passes bytes from the "Relying Party" (that's you, using WebAuthn) to the authenticator during a WebAuthn authentication ceremony. The authenticator "hashes" (HMACs) these bytes with secret bytes internally associated with a previously registered credential (as per[ CTAP's `hmac-secret` extension](https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-hmac-secret-extension)) and returns the resulting bytes to the browser in the output from `navigator.credentials.get()`.
 
-These bytes can be considered "indistinguishably random". This makes them great input into an "HMAC-based Key Derivation Function" (HKDF) to generate a "key derivation key". The key derivation key can then be used to derive _another_ symmetric key that's used to perform the actual data encryption.
+The high-entropy bytes returned from the authenticator are perfect input key material for an "HMAC-based Key Derivation Function" (HKDF), which helps us generate a "key derivation key". The key derivation key is then used to derive _another_ symmetric key that's used to perform the actual data encryption.
 
-Something to remember is that output from the `prf` extension will be **the same for every authentication ceremony** so long as A) the same WebAuthn credential is used, and B) the bytes the RP passes to the authenticator are the same. These two come together to make it possible to **deterministically recreate** the symmetric encryption key protecting the data at any time.
+Something to remember is that output from the `prf` extension will be **the same for every authentication ceremony** so long as A) the same WebAuthn credential is used, and B) the bytes the RP passes to the authenticator are the same. These two come together to make it possible to **deterministically recreate** the symmetric encryption key protecting the data at any time. And even better, the secret bytes within the authenticator are origin-bound as well because of the origin-bound credential they are associated with!
 
 ## Practical use
 
@@ -40,27 +40,27 @@ Make a typical call to `navigator.credentials.create()` with the `prf` extension
 ```js
 /**
  * This value is for sake of demonstration. Pick 32 random
- * bytes. `firstBytes` can be static for your site or unique
- * per credential depending on your needs.
+ * bytes. `salt` can be static for your site or unique per
+ * credential depending on your needs.
  */
-const firstBytes = new Uint8Array(new Array(32).fill(1)).buffer;
+const firstSalt = new Uint8Array(new Array(32).fill(1)).buffer;
 
 const regCredential = await navigator.credentials.create({
   publicKey: {
-    challenge: new Uint8Array([1, 2, 3, 4]),
+    challenge: new Uint8Array([1, 2, 3, 4]), // Example value
     rp: {
       name: "SimpleWebAuthn Example",
       id: "dev.dontneeda.pw",
     },
     user: {
-      id: new Uint8Array([5, 6, 7, 8]),
+      id: new Uint8Array([5, 6, 7, 8]),  // Example value
       name: "user@dev.dontneeda.pw",
       displayName: "user@dev.dontneeda.pw",
     },
     pubKeyCredParams: [
-      { alg: -8, type: "public-key" },
-      { alg: -7, type: "public-key" },
-      { alg: -257, type: "public-key" },
+      { alg: -8, type: "public-key" },   // Ed25519
+      { alg: -7, type: "public-key" },   // ES256
+      { alg: -257, type: "public-key" }, // RS256
     ],
     authenticatorSelection: {
       userVerification: "required",
@@ -68,13 +68,15 @@ const regCredential = await navigator.credentials.create({
     extensions: {
       prf: {
         eval: {
-          first: firstBytes,
+          first: firstSalt,
         },
       },
     },
   },
 });
 ```
+
+> NOTE: The `first` passed in here isn't currently used during registration, but the `prf` extension requires it to be set.
 
 Tap your security key, follow the browser prompts, then call `getClientExtensionResults()` afterwards and look for a `prf` entry:
 
@@ -91,12 +93,12 @@ If you see `enabled: true` then you're good to continue. If you don't then you'l
 
 ### Step 2: Authenticate to encrypt
 
-The next step is to protect our super secret message with a call to `navigator.credentials.get()`:
+The next step is to call `navigator.credentials.get()` and pass in our `firstSalt`:
 
 ```js
 const auth1Credential = await navigator.credentials.get({
   publicKey: {
-    challenge: new Uint8Array([9, 0, 1, 2]),
+    challenge: new Uint8Array([9, 0, 1, 2]), // Example value
     allowCredentials: [
       {
         id: regCredential.rawId,
@@ -105,11 +107,13 @@ const auth1Credential = await navigator.credentials.get({
       },
     ],
     rpId: "dev.dontneeda.pw",
+    // This must always be either "discouraged" or "required".
+    // Pick one and stick with it.
     userVerification: "required",
     extensions: {
       prf: {
         eval: {
-          first: firstBytes,
+          first: firstSalt,
         },
       },
     },
@@ -120,7 +124,8 @@ const auth1Credential = await navigator.credentials.get({
 Tap your security key again, then call `getClientExtensionResults()` afterwards and look for the `prf` entry:
 
 ```js
-console.log(auth1Credential.getClientExtensionResults());
+const auth1ExtensionResults = auth1Credential.getClientExtensionResults();
+console.log(auth1ExtensionResults);
 //   prf: {
 //     results: {
 //       first: ArrayBuffer(32),
@@ -131,14 +136,17 @@ console.log(auth1Credential.getClientExtensionResults());
 
 The `first` bytes returned here are the key (no pun intended) to the next steps involving [WebCrypto's SubtleCrypto](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto) browser API:
 
-#### Step 2.1: Import the key derivation key
+#### Step 2.1: Import the input key material
 
-Start by creating a key derivation key using `crypto.subtle.importKey()`:
+Create a key derivation key using `crypto.subtle.importKey()`:
 
 ```js
+const inputKeyMaterial = new Uint8Array(
+  auth1ExtensionResults.prf.results.first,
+);
 const keyDerivationKey = await crypto.subtle.importKey(
   "raw",
-  new Uint8Array(first),
+  inputKeyMaterial,
   "HKDF",
   false,
   ["deriveKey"],
@@ -174,12 +182,12 @@ const encryptionKey = await crypto.subtle.deriveKey(
 Now we can encrypt our message using the aptly named `crypto.subtle.encrypt()` method:
 
 ```js
-// Keep track of `iv`, you'll need it to decrypt later!
+// Keep track of this `nonce`, you'll need it to decrypt later!
 // FYI it's not a secret so you don't have to protect it.
-const iv = crypto.getRandomValues(new Uint8Array(12));
+const nonce = crypto.getRandomValues(new Uint8Array(12));
 
 const encrypted = await crypto.subtle.encrypt(
-  { name: "AES-GCM", iv },
+  { name: "AES-GCM", iv: nonce },
   encryptionKey,
   new TextEncoder().encode("hello readers 🥳"),
 );
@@ -191,8 +199,8 @@ Decrypting the message looks almost the same as everything in Step 2, except dur
 
 ```js
 const decrypted = await crypto.subtle.decrypt(
-  // `iv` should be the same value from Step 2.3
-  { name: "AES-GCM", iv },
+  // `nonce` should be the same value from Step 2.3
+  { name: "AES-GCM", iv: nonce },
   encryptionKey,
   encrypted,
 );
@@ -214,11 +222,12 @@ Here's a screenshot of Chrome Canary after I wired all of this up into my [Simpl
 ## Things to remember
 
 - The `prf` extension is currently available in Chrome Canary 111. According to the [Chrome Roadmap](https://chromestatus.com/roadmap) we can probably expect to see `prf` support roll out to everyone when Chrome 111 debuts around March 2023.
-- Even though the encryption key can be deterministically recreated, the bytes used to derive it are the result of a hash of `bytes within the authenticator || bytes provided by the RP`. An attacker will easily see `bytes provided by the RP` as the inputs for the `prf` extension. However they shouldn't ever be able to get to `bytes within the authenticator`, making it safe to perform the actual encryption and decryption in the browser.
-- This encryption scheme benefits from WebAuthn's phishing resistance because the authenticator associates its half of the hashed bytes to a specific **origin-bound** credential.
+- Even though the encryption key can be deterministically recreated, the bytes used to derive it are the result of a hash of `bytes within the authenticator || bytes provided by the RP` (see [here](https://w3c.github.io/webauthn/#prf-extension) for how the browser actually salts `bytes provided by the RP` before passing them to the authenticator). An attacker will easily see `bytes provided by the RP` as the inputs for the `prf` extension. However they shouldn't ever be able to get to `bytes within the authenticator`, making it safer to perform the actual encryption and decryption in the browser.
+- This encryption scheme is largely protected from **remote threats** thanks to WebAuthn's phishing resistance. This is because the authenticator associates its contribution to the input key material to a specific **origin-bound** credential.
+- **Local threats** like JavaScript injection attacks, though, could exfiltrate the value of `inputKeyMaterial` from Step 2.1 and store it away for later use. The [Content Security Policy HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) can help control what JavaScript executes on your site. Unfortunately it won't protect against malicious browser extensions which are often able to ignore CSP headers.
 - User verification should always be `"required"`, or always be `"discouraged"`. The authenticator uses two sets of bytes with `hmac-secret`, and chooses which to use based on [the `"userVerification"` argument passed into `navigator.credentials.get()`](https://w3c.github.io/webauthn/#dom-publickeycredentialrequestoptions-userverification). See references to "CredRandomWithUV" and "CredRandomWithoutUV" in [the CTAP spec](https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-hmac-secret-extension) for more info.
 - I recommend you **always require user verification**. This protects your secret data with the security key's PIN as well since the PIN will be needed to complete the WebAuthn authentication ceremonies.
-- **Never forget the initialization vector** (`iv` in the code above) that you used to encrypt your data! I've learned it's not a secret, though, so it can be safely transported with the encrypted data for later decryption.
+- The `nonce` value must **always be unique for any single encryption** (and its corresponding decryption) when using AES-GCM encryption keys like in the code above. I've learned it's not a secret, though, so it can be safely transported with the encrypted data for later decryption.
 - I protected a simple UTF-8 string in the example above, but the encryption and decryption **should work fine over any arbitrary bytes.**
 - There isn't anything preventing platform authenticators from supporting `prf`, but I haven't found one that does yet. I'll update this post if/when any start supporting it.
 
