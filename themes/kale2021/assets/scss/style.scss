@@ -307,3 +307,11 @@ img.preview-portrait {
     }
   }
 }
+
+@media print {
+  header {
+    // Prevent the <header> from appearing in the middle of the page if you
+    // scroll down a bit before deciding the print a post
+    position: relative;
+  }
+}
