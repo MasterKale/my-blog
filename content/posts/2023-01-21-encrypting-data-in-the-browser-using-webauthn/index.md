@@ -235,6 +235,6 @@ Here's a screenshot of Chrome Canary after I wired all of this up into my [Simpl
 
 So there you have it, data encryption using WebAuthn. I'm excited by the possibilities this brings to websites, and I know that it's just a matter of time before others find novel ways to apply this technique to strongly protect your secrets.
 
-And heck, now that I've written this I might just try to creating something novel with `prf` too...
+And heck, now that I've written this I might just try creating something novel with `prf` myself...
 
 *(A huge thanks to [Cendyne](https://cendyne.dev/) for helping proof-read the cryptographic-heavy parts of this post!)*
