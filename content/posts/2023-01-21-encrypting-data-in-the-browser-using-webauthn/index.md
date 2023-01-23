@@ -1,7 +1,7 @@
 +++
 title = "Encrypting Data in the Browser Using WebAuthn"
 date = "2023-01-22T02:54:33.323Z"
-description = "My sneakernet fantasies have become reality 👟"
+description = "My sneakernet hacker fantasies are becoming reality 👟"
 categories = ["webauthn"]
 keywords = ["webauthn", "encryption"]
 hasCode = true
@@ -237,4 +237,4 @@ So there you have it, data encryption using WebAuthn. I'm excited by the possibi
 
 And heck, now that I've written this I might just try to creating something novel with `prf` too...
 
-*(And a huge thanks to [Cendyne](https://cendyne.dev/) for helping proof-read the cryptographic-heavy parts of this post!)*
+*(A huge thanks to [Cendyne](https://cendyne.dev/) for helping proof-read the cryptographic-heavy parts of this post!)*
