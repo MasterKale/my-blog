@@ -26,15 +26,15 @@ Practically speaking, it seemed easy for an RP to misconfigure these values and 
 
 **Chrome**
 
-![](images/list_chrome.png)
+![Chrome displaying a list of WebAuthn credentials. All have the same RP ID, while two have the username "mmiller" and the third uses my entire email address](images/list_chrome.png)
 
 **1Password**
 
-![](images/list_1password.png)
+![1Password displaying three seemingly identical passkeys for their fake PassParcel demo site](images/list_1password.png)
 
 **Safari**
 
-![](images/list_safari.png)
+![Safari displaying five passkeys, all showing the same usernames across two RP IDs](images/list_safari.png)
 
 Which credentials are still valid? Which can I delete? From these real-world examples it seems impossible to tell.
 
@@ -46,11 +46,11 @@ Chrome used `user.name` for both registration and passkey management.
 
 **Registration:**
 
-![](images/chrome_registration.png)
+![The Chrome registration prompt displays the value of user.name](images/chrome_registration.png)
 
 **Management:**
 
-![](images/chrome_management.png)
+![The Chrome management UI displays user.name](images/chrome_management.png)
 
 ## Safari 16.3 (macOS 13.2)
 
@@ -58,11 +58,11 @@ Safari also used only `user.name` for registration and passkey management.
 
 **Registration:**
 
-![](images/safari_registration.png)
+![The Safari registration prompt displays the value of user.name](images/safari_registration.png)
 
 **Management:**
 
-![](images/safari_management.png)
+![The Safari management UI displays user.name](images/safari_management.png)
 
 ## Windows Hello (Windows 11)
 
@@ -70,7 +70,7 @@ Windows Hello solely used `user.name`.
 
 **Registration:**
 
-![](images/windows_hello_registration.png)
+![The Windows Hello registration prompt displays the value of user.name](images/windows_hello_registration.png)
 
 **Management:**
 
@@ -85,11 +85,11 @@ iOS too limited itself to using `user.name` for registration and management.
 
 **Registration:**
 
-![](images/ios_registration.jpg)
+![The iOS registration prompt displays the value of user.name](images/ios_registration.jpg)
 
 **Management:**
 
-![](images/ios_management.jpg)
+![The iOS management UI displays user.name](images/ios_management.jpg)
 
 ## Android 13
 
@@ -97,11 +97,11 @@ Android was the only platform that leveraged both `user.name` and `user.displayN
 
 **Registration:**
 
-![](images/android_registration.png)
+![The Android registration prompt displays the value of user.displayName above user.name](images/android_registration.png)
 
 **Management:**
 
-![](images/android_management.png)
+![The Android management UI displays user.name](images/android_management.png)
 
 ## Conclusion
 
