@@ -7,7 +7,7 @@ keywords = ["webauthn", "chrome", "safari", "windows hello", "android", "macos"]
 hasCode = false
 +++
 
-WebAuthn defines two possible values that Relying Parties (RPs) can set to help users understand which account they're registering an credential for and using for subsequent authentication:
+WebAuthn defines two possible values that Relying Parties can set to help users understand for which account they're registering a credential and using in subsequent authentications:
 
 - `user.name` ([spec](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialentity-name))
 - `user.displayName` ([spec](https://www.w3.org/TR/webauthn-2/#dom-publickeycredentialuserentity-displayname))
