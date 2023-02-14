@@ -105,7 +105,7 @@ main {
   }
 }
 
-blockquote {
+blockquote, .note {
   background: rgba(var(--text), 0.25);
   margin: 0;
   padding: 0.5rem 1rem;
