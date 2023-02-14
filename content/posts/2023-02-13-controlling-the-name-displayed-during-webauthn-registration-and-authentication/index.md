@@ -64,7 +64,7 @@ Safari also used only `user.name` for registration and passkey management.
 
 ![The Safari management UI displays user.name](images/safari_management.png)
 
-## Windows Hello (Windows 11)
+## Windows Hello (Windows 11 21H2)
 
 Windows Hello solely used `user.name`.
 
@@ -76,7 +76,7 @@ Windows Hello solely used `user.name`.
 
 N/A
 
-NOTE: I couldn't find credential management UI in Windows or Chrome so it's likely we'll have to wait till Microsoft's support for passkeys debuts to see which value(s) it uses.
+NOTE: I couldn't find passkeys management in Chrome on Windows, but I've been informed I need to be on Windows 11 22H2 to see it. I'm updating now and will update this section when I can grab a screenshot (it'll probably look like macOS Chrome above)
 {.note role="note"}
 
 ## iOS 16.3
