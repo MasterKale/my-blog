@@ -6,11 +6,11 @@ command = "hugo --gc --minify"
 TZ = "America/Los_Angeles"
 
 [context.production.environment]
-HUGO_VERSION = "0.100.1"
+HUGO_VERSION = "0.110.0"
 HUGO_ENV = "production"
 
 [context.deploy-preview]
 command = "hugo --gc --minify --baseURL $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
-HUGO_VERSION = "0.100.1"
+HUGO_VERSION = "0.110.0"
