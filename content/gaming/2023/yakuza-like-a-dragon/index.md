@@ -1,10 +1,10 @@
 +++
-title = "A Plague Tale: Innocence"
-date = "2023-01-07T03:34:45.967Z"
+title = "Yakuza: Like A Dragon"
+date = "2023-04-27T15:21:34.972Z"
 description = ""
 gaming = 2023
 system = "PS5"
-completed = true
+completed = false
 platinum = false
 [[resources]]
 src = "images/boxart.jpg"

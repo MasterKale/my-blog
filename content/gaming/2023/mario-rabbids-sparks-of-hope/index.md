@@ -1,10 +1,10 @@
 +++
-title = "A Plague Tale: Innocence"
-date = "2023-01-07T03:34:45.967Z"
+title = "Mario + Rabbids Sparks of Hope"
+date = "2023-03-27T15:24:36.750Z"
 description = ""
 gaming = 2023
-system = "PS5"
-completed = true
+system = "Switch"
+completed = false
 platinum = false
 [[resources]]
 src = "images/boxart.jpg"
