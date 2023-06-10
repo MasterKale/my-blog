@@ -161,7 +161,7 @@ Next, create the symmetric key that we'll use for encryption with `crypto.subtle
 // Never forget what you set this value to or the key can't be
 // derived later
 const label = "encryption key";
-const info = textEncoder.encode(label);
+const info = new TextEncoder().encode(label);
 // `salt` is a required argument for `deriveKey()`, but should
 // be empty
 const salt = new Uint8Array();
@@ -238,3 +238,7 @@ So there you have it, data encryption using WebAuthn. I'm excited by the possibi
 And heck, now that I've written this I might just try creating something novel with `prf` myself...
 
 *(A huge thanks to [Cendyne](https://cendyne.dev/) for helping proof-read the cryptographic-heavy parts of this post!)*
+
+<hr>
+
+**Edit (Jun 10, 2023):** I fixed an issue with one of the code samples. I also created [a gist based on this post](https://gist.github.com/MasterKale/dbe39a01438251f0cbd55576304731fd) that can be hosted at `http://localhost` to test `prf` support in various browsers.
