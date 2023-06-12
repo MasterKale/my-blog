@@ -11,7 +11,7 @@ There wasn't a lot of news about passkeys at WWDC23. And in fact I had to go dig
 
 ![A screenshot of the Apple Developers app on macOS. A search for "passkeys" brings up a list of collections, videos, and articles with the keyword highlighted, but a mix of content from both WWDC22 and WWDC23. Only one video, "Deploy passkeys at work", is specifically about passkeys.](images/developers_app_passkeys_search.png)
 
-Last week I managed to glean more insights into Apple's continuing evolution of their passkeys support from other places online so I decided to pull together all the latest news I found about Apple's evolving passkeys support coming in **iOS 17**, **iPadOS 17**, and **macOS 14**.
+Last week I managed to glean more insights into Apple's continuing evolution of their passkeys support from other places online, though, so I decided to pull it all together. Here's the latest news on changes coming in **iOS 17**, **iPadOS 17**, and **macOS 14** to Apple's passkeys experience.
 
 ## Deploy passkeys at work
 
