@@ -1,9 +1,9 @@
 +++
 title = "WWDC23: Passkeys"
 date = "2023-06-10T15:32:29.589Z"
-description = ""
+description = "All the passkeys news not fit to print or film or whatever"
 categories = ["apple", "wwdc", "webauthn"]
-keywords = []
+keywords = ["apple", "wwdc", "passkeys", "enterprise attestation", "passkey providers"]
 hasCode = true
 +++
 
