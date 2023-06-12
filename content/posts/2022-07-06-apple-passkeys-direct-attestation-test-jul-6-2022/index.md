@@ -2,7 +2,7 @@
 title = "Apple Passkeys - Direct Attestation Test (July 6, 2022)"
 date = "2022-07-07T06:27:31.032Z"
 description = ""
-categories = ["webauthn", "macos", "safari"]
+categories = ["webauthn", "macos", "safari", "apple"]
 keywords = ["apple", "passkeys", "webauthn"]
 hasCode = true
 +++
