@@ -255,6 +255,15 @@ img.preview-portrait {
   padding: 0;
 }
 
+.post-description {
+  font-style: italic;
+}
+
+.metadata-hr {
+  border: none;
+  border-top: 0.15rem solid safe-rgb(var(--emphasis));
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: 171, 178, 191;

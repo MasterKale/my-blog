@@ -1,4 +1,4 @@
-<em class="byline metadata">
+<div class="metadata">
   {{ $dateTime := .PublishDate.Format "2006-01-02" }}
   {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
   <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
@@ -15,4 +15,8 @@
     {{ end }}
   </ul>
   {{ end }}
-</em>
+</div>
+<p class="post-description">
+  {{ .Description }}
+</p>
+<hr class="metadata-hr">
