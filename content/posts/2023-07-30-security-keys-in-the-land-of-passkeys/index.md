@@ -1,6 +1,6 @@
 +++
 title = "Security keys in the land of passkeys"
-date = "2023-07-22T00:00:03.351Z"
+date = "2023-07-30T00:00:03.351Z"
 description = "Protect your synced passkey provider accounts with the gold standard in multi-factor authenticators."
 categories = ["webauthn"]
 keywords = ["passkeys", "security keys", "passkey providers"]
@@ -13,13 +13,13 @@ Security keys are great! They're considered [the "gold standard" of FIDO2 authen
 
 While security keys consistently generate "[device-bound passkeys](https://passkeys.dev/docs/reference/terms/#device-bound-passkey)", most users are being moved towards "[synced passkeys](https://passkeys.dev/docs/reference/terms/#synced-passkey)" to help address the historically-lacking account recovery story, for example how users regain login access to their favorite websites in the case of device loss.
 
-This fact raises a non-obvious issue with security keys in a passkey world: **passkeys, whether device-bound or synced, must be stored by the authenticator that creates them**. Platform authenticators embedded in a phone, laptop, or computer can store a near-infinite number of passkeys. Security keys, however, can only store a around 25 ([Yubikeys](https://support.yubico.com/hc/en-us/categories/360002541740-Devices)) to 50 ([SoloKeys](https://github.com/solokeys/solo1/issues/156#issuecomment-477645573)) passkeys.
+This fact raises a non-obvious issue with security keys in a passkey world: **passkeys, whether device-bound or synced, must be stored by the authenticator that creates them**. Platform authenticators embedded in a phone, laptop, or computer can store a near-infinite number of passkeys. Security keys, however, can only store 25 ([Yubico](https://support.yubico.com/hc/en-us/categories/360002541740-Devices)) to as many as 150 ([TrustKey](https://www.trustkeysolutions.com/en/sub/support.form)).
 
-After a bit of math, an internet power-user like myself who wants to maximize their security and only use security keys with WebAuthn-backed authentication would **require 15-30 security keys just to replace all of their current passwords with device-bound passkeys**:
+After a bit of math, an internet power-user who wants to maximize their security and only use security keys with WebAuthn-backed authentication would **require 5-30 security keys just to replace all of their *current* passwords with device-bound passkeys**:
 
 ![A screenshot of the right-click menu in 1Password with all of my logins highlighted. It reveals I have accumulated over 700 username+password logins over the years](images/password_locker_login_count.png)
 
-Even for me that's too many security keys...
+Even five is too many security keys for someone like me...
 
 ## Additional complications
 
