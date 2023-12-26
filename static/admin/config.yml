@@ -77,7 +77,6 @@ collections:
       - {label: "Gaming Year", name: "gaming", widget: "date", format: "YYYY"}
       - {label: "Console Name", name: "system", widget: "string", default: "PS5|PC|Switch"}
       - {label: "Story Completed?", name: "completed", widget: "boolean", default: false}
-      - {label: "100% Achievements?", name: "platinum", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
     summary: "{{year}} - {{title}}"
     preview_path: "gaming/{{year}}/{{title}}/"
