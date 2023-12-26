@@ -5,7 +5,7 @@ description = ""
 gaming = 2022
 system = "PS5"
 completed = false
-platinum = false
+
 [[resources]]
 src = "images/boxart.jpg"
 name = "featured"

@@ -1,17 +1,12 @@
 <!-- Prepare info to display next to the title -->
 {{ $system := .Params.System }}
 {{ $completed := ""}}
-{{ $platinum := ""}}
 <!-- An icon indicating game completion -->
 {{ if .Params.Completed }}
   {{ $completed = "<span title=\"Roll Credits\">✅</span>" }}
 {{ end }}
-<!-- An icon indicating 100% collection of trophies/achievements/etc... -->
-{{ if .Params.Platinum }}
-  {{ $platinum = "<span title=\"100% Achievements\">🏅</span>" }}
-{{ end }}
 <!-- Concatenate everything into a single string -->
-{{ $info := delimit (slice $system $completed $platinum) " " }}
+{{ $info := delimit (slice $system $completed) " " }}
 {{ $info = strings.TrimRight " " $info }}
 <!-- Render everything -->
 ({{ $info | safeHTML }})

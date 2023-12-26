@@ -5,7 +5,7 @@ description = ""
 gaming = 2023
 system = "Switch"
 completed = true
-platinum = false
+
 [[resources]]
 src = "images/boxart.jpg"
 name = "featured"

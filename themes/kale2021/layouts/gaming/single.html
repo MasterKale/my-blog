@@ -7,7 +7,6 @@
   <ul class="gaming-single-meta">
     <li class="system">System: {{ .Params.System }}</li>
     <li class="completed">Completed: {{ cond .Params.Completed "Yes" "No" }}</li>
-    <li class="platinum">100% Achievements: {{ cond .Params.Platinum "Yes" "No" }}</li>
   </ul>
   {{ $boxartDescription := .Params.description }}
   {{ with .Resources.GetMatch "featured" }}

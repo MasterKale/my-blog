@@ -5,7 +5,7 @@ description = "\"Umm actually they're called runes not souls\""
 gaming = 2022
 system = "PS5"
 completed = false
-platinum = false
+
 [[resources]]
 src = "images/boxart.jpg"
 name = "featured"

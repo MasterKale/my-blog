@@ -5,7 +5,6 @@ description = "More than a tech demo..."
 gaming = 2022
 system = "PS5"
 completed = true
-platinum = true
 [[resources]]
 src = "images/boxart.jpg"
 name = "featured"
