@@ -1,7 +1,8 @@
 {{ define "main" }}
   <h2><a href="/gaming/">Games I Played</a> &gt; {{ .Title }}</h2>
-  <ol>
-    {{ range .Pages.ByPublishDate }}
+  <p>
+    <em>Games are sorted from most to least recently played.</em>
+  </p>
   <ol reversed>
     {{ range .Pages.ByPublishDate.Reverse }}
       {{ $wordcount := print .Content | countwords }}
