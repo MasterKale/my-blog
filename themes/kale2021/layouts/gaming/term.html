@@ -2,6 +2,8 @@
   <h2><a href="/gaming/">Games I Played</a> &gt; {{ .Title }}</h2>
   <ol>
     {{ range .Pages.ByPublishDate }}
+  <ol reversed>
+    {{ range .Pages.ByPublishDate.Reverse }}
       {{ $wordcount := print .Content | countwords }}
       <li>
       {{ if gt $wordcount 0 }}
