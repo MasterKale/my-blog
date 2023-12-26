@@ -1,11 +1,27 @@
 {{ define "main" }}
-  <h2>Games I Played By Year</h2>
-  <ol class="categories--list">
-    {{ range sort .Site.Taxonomies.gaming.Alphabetical.Reverse }}
-      <li>
-        <a href="{{ .Page.Permalink }}" class="category--title">{{ .Page.Title }}</a>
-        <span class="category--count">({{ .Count }})</span>
-      </li>
-    {{end }}
-  </ol>
+  <h2>Games I Played</h2>
+  <p>
+    Games are sorted by year, then from most to least recently played.
+  </p>
+  {{ range sort .Site.Taxonomies.gaming.Alphabetical.Reverse }}
+  <h3>
+    <a href="{{ .Page.Permalink }}" class="category--title">{{ .Page.Title }}</a>
+    <span class="category--count">({{ .Count }})</span>
+  </h3>
+    <ol reversed>
+      {{ range sort .Pages.ByPublishDate.Reverse }}
+        {{ $wordcount := print .Content | countwords }}
+        <li>
+        {{ if gt $wordcount 0 }}
+          <a href="{{ .RelPermalink }}" class="title">
+            {{ .Title }}
+          </a>
+        {{ else }}
+          {{ .Title }}
+        {{ end }}
+          {{ partial "metadata-gaming.html" . }}
+        </li>
+      {{ end }}
+    </ol>
+  {{end }}
 {{ end }}
