@@ -1,7 +1,7 @@
 {{ define "main" }}
   <h2>Games I Played</h2>
   <p>
-    <em>Games are sorted by year, then from most to least recently played.</em>
+    <em>Games are sorted from most to least recently played.</em>
   </p>
   {{ range sort .Site.Taxonomies.gaming.Alphabetical.Reverse }}
   <h3>
