@@ -12,9 +12,9 @@ I also give talks to other developers on things like [GraphQL](https://cnc-graph
 
 When I'm not [blogging](/) or [working on open-source](https://github.com/MasterKale), I'm probably [gaming](/gaming/). If you want to contact me just hit me up at any of the links below 👇
 
-- **GitHub:** [MasterKale](https://github.com/MasterKale)
-- **Mastodon:** <a rel="me" href="https://infosec.exchange/@iamkale">@iamkale@infosec.exchange</a>
 - **Email:** matthew@millerti.me
+- **Mastodon:** <a rel="me" href="https://infosec.exchange/@iamkale">@iamkale@infosec.exchange</a>
+- **GitHub:** [MasterKale](https://github.com/MasterKale)
 
 ## "Matt's Headroom"?
 
