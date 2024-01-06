@@ -1,7 +1,7 @@
 +++
 title = "Star Ocean: The Second Story R"
 date = "2023-12-26T21:28:43.379Z"
-description = ""
+description = "\"Get in the teleporter, Shinji!\""
 gaming = 2023
 system = "Switch"
 completed = true

@@ -1,7 +1,7 @@
 +++
 title = "Ori and the Will of the Wisps"
 date = "2023-12-31T00:00:00.686Z"
-description = ""
+description = "A wonderful follow-up to a whimsical metroidvania"
 gaming = 2023
 system = "Switch"
 completed = true
