@@ -40,13 +40,13 @@ The **"Browser" app on the Meta Quest 3** has the following User Agent:
 
 ![The Meta Quest 3 Browser showing the user agent via whatismybrowser.com](images/user_agent.jpg)
 
-Naive user agent parsing might interpret this as Chrome on Linux, but the presence of `OculusBrowser` should be a dead giveaway that this is a Quest device. `VR Safari` is noteworthy to me because I don't think I've seen it from any other device (and Safari on VisionOS definitely doesn't mention this anywhere, see the **Addendum** below.)
-
 Here's the entire **Meta Quest 3 Browser** user agent string:
 
 > Mozilla/5.0 (X11; Linux x86_64; Quest 3) AppleWebKit/537.36 (KHTML, like Gecko) OculusBrowser/31.2.0.4.43.556544219 SamsungBrowser/4.0 Chrome/120.0.6099.210 VR Safari/537.36
 
-This can come in handy in crafting passkey experiences that disable use of WebAuthn in this browser since it won't work anyway.
+Naive user agent parsing might interpret this as Chrome on Linux, but the presence of `OculusBrowser` should be a dead giveaway that this is a Quest device. `VR Safari` is noteworthy to me because I don't think I've seen it from any other device (and Safari on VisionOS definitely doesn't mention this anywhere, see the **Addendum** below.)
+
+This knowledge can come in handy to craft a passkey experience that disables use of WebAuthn in this browser since it won't work anyway.
 
 ## Conclusion
 
