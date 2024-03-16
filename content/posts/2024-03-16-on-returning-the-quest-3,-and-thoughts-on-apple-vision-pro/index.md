@@ -9,7 +9,7 @@ hasCode = false
 
 A week or so after writing [about passkeys support on the Quest 3]({{< relref "/content/posts/2024-02-05-passkeys-support-on-the-meta-quest-3/index.md" >}}) I had spent enough time with the device to know that it just wasn't meant to be. But while I ultimately packed it all up, brought it back to the store, and put it in my rear view mirror, I still liked some parts of the experience.
 
-Below are lingering thoughts about my time with the Quest 3 and I think it compares to the Apple Vision Pro (sometimes AVP below) demo I experienced around the same time.
+Below are lingering thoughts about my time with the Quest 3 and how I think it compares to the Apple Vision Pro (sometimes AVP below) demo I experienced around the same time.
 
 ## The Quest 3's upgraded strap is a necessity
 
@@ -23,7 +23,7 @@ The headset came on and off effortlessly with the Elite Strap when compared to t
 
 The color passthrough really impressed me, especially compared to the Vive's grainy, outlines-only view of the world you could lean on in a pinch. Sure, the Quest 3's passthrough was still grainy, and visual distortions while walking around didn't induce VR nausea but were an obvious area for improvement. That said, being able to position a YouTube video somewhere "in the world" and then continue to see it while walking around like some ethereal flat-screen TV left a positive impression on me. It was also amusing to be able to see and converse with my wife while a video of the Final Fantasy 7 Rebirth demo played off on some wall as I vacuumed while wearing the Quest 3.
 
-VR is great for immersive experiences, but I think passthrough leaves me stronly agreeing that Augmented Reality is where this technology needs to end up before it can become another daily-use technology.
+VR is great for immersive experiences, but I think passthrough leaves me strongly agreeing that Augmented Reality is where this technology needs to end up before it can become another daily-use technology.
 
 ## The screen door effect has significantly diminished
 
@@ -31,7 +31,7 @@ I looked up the screen resolutions of the HTC Vive to compare to the Quest 3, an
 
 One thing that worked against the Quest 3, though, was how eager apps were to only stream both 2D and 3D video at 480p. This included the native YouTube app, as well as Disney+, neither of which gave you an (obvious) option to switch to higher resolutions. It gave the impression that the screens weren't actually that good.
 
-I found out via the [Oculus Quest subreddit](https://www.reddit.com/r/OculusQuest/) that accessing YouTube in the Quest Browser let you stream at 4K. Once I tried that out the full visual clarity of the hardware could be appreciated. An odd choice by Google and Disney there...
+I found out via the [r/OculusQuest](https://www.reddit.com/r/OculusQuest/) subreddit that accessing YouTube in the Quest Browser let you stream content at higher resolutions, including 4K. Once I tried that out the full visual clarity of the hardware could be appreciated. An odd choice by Google and Disney there...
 
 ## Hand tracking now feels like table stakes
 
@@ -55,7 +55,7 @@ A lot of ink has already been spilled about how the Quest 3 compares to the Appl
 
 Looking-and-pinching to manipulate the VR environment in the Apple Vision Pro is a more **comfortable** interaction paradigm because your hands are at rest in your lap. But being able to reach out and "directly manipulate" windows with your hands in the Quest 3 feels more **natural**. Sure, the AVP also has hand tracking that lets you hunt-and-peck on a keyboard just like in the Quest 3, but it did less work to prevent you from seeing when your hand would go clear through an interactive element. After the AVP demo I felt that the Quest 3's hand-tracking manipulation was the superior of the two.
 
-I think the AVP wins the screen fidelity battle, but not by much. The AVP's fully immersive environments were prettier compared to the Quest 3's (in a forehead-smackingly "photos are more realistic than stylized 3D game environments" kind of way) sure, but both have tackled the screen door problem to a degree that I was happy it took so much effort to notice the pixels. Remember, I'm coming from an HTC Vive that is basically half the resolution of the Quest 3 so it doesn't take much to impress me here.
+I think the AVP wins the screen fidelity battle, but not by much. The AVP's fully immersive environments were prettier compared to the Quest 3's (in a forehead-smackingly "photos are more realistic than stylized 3D game environments" kind of way) sure, but both have tackled the screen door problem to a degree that I was happy it took so much effort to notice the pixels. Remember, I'm coming from an HTC Vive that is basically half the resolution of the Quest 3 so it didn't take much to impress me here.
 
 The FOV of the Quest 3 was wide enough, and the hardware capable enough of keeping up with my head movement, that I barely ever registered the edges of the screen. I noticed the edges of the AVP's screen more than I expected, but maybe because I was looking for them during the demo?
 
