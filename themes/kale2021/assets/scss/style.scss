@@ -197,6 +197,10 @@ footer {
       content: ", ";
     }
   }
+
+  dfn {
+    text-decoration: underline dashed;
+  }
 }
 
 .category--count {

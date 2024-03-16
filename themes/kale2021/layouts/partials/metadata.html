@@ -4,7 +4,7 @@
   <time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
   {{ if not .Site.Params.hideReadingTime }}
   <span class="reading-time">
-    - {{ .ReadingTime }} minute read
+    - <dfn title="{{ .WordCount }} words">{{ .ReadingTime }} minute read</dfn>
   </span>
   {{ end }}
   {{ if isset .Params "categories" }}
