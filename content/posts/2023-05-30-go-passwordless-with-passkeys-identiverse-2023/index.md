@@ -15,4 +15,4 @@ Over the past few years we've seen a meteoric rise in MFA adoption. It's been dr
 
 ## Links
 
-- Slides: [Authenticate 2023 - Go Passwordless with Passkeys.pdf](images/Authenticate%202023%20-%20Go%20Passwordless%20with%20Passkeys.pdf)
+- Slides: [Identiverse 2023 - Go Passwordless with Passkeys.pdf](images/Identiverse%202023%20-%20Go%20Passwordless%20with%20Passkeys.pdf)
