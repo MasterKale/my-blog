@@ -60,8 +60,6 @@ These are active protections that enlist the help of tools the user has consente
 
 ## Passkeys are better than ever
 
-Browsers and OS vendors both continue to iterate on communicating the benefits of passkeys, and on making passkeys easier to use. Additionally, new technologies like the FIDO Alliance's [Credential Exchange Protocol and Credential Exchange Format](https://fidoalliance.org/specifications-credential-exchange-specifications/) are coming out soon to allow for passkey private keys to be securely migrated between providers.
+Browser vendors and OS vendors continue to iterate on streamlining passkey registration and authentication. Additionally, password managers (now passkey providers) continue to collaborate closely on new technologies like the FIDO Alliance's [Credential Exchange Protocol and Credential Exchange Format](https://fidoalliance.org/specifications-credential-exchange-specifications/) to allow for passkey private keys to be securely migrated between providers. The fact is, passkey use and management gets better every day.
 
-The industry as a whole remains committed to enhancing the usability of passkeys, and continue to work tirelessly to address the tougher adoption challenges that remain. However we can all continue to benefit from the phishing resistance of passkeys as an auth method, so now's the time to start acclimating. Password managers still have a place in our world, especially as most of them evolve to become passkey providers as well.
-
-Now is the time to start acclimating to passkeys. Because we'll all be better for it in the long run.
+We can all benefit from the phishing resistance of passkeys as an authentication method right now while the industry continues to work tirelessly to address the tougher adoption challenges that remain. Now is the time to start acclimating to passkeys - we'll all end up better for it in the long run.
