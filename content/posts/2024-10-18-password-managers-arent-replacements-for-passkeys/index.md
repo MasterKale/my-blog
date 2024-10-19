@@ -7,7 +7,9 @@ keywords = ["passkeys", "password managers"]
 hasCode = false
 +++
 
-There was [some recent discourse](https://world.hey.com/dhh/passwords-have-problems-but-passkeys-have-more-95285df9) about passkeys that bemoaned that they have *so* many issues that it's better to stick with a password manager. The idea is that maintaining strong, unique passwords via a password manager is easier for users to understand. This completely misses the key point about why passkeys are such a stronger way of protecting login, though, so I decided to spend some time to compare the two approaches.
+There was [some recent discourse](https://world.hey.com/dhh/passwords-have-problems-but-passkeys-have-more-95285df9) about passkeys that bemoaned that they have *so* many issues that it's better to stick with a password manager. The idea is that maintaining strong, unique passwords via a password manager is easier for users to understand.
+
+This completely misses the key point about why passkeys are such a stronger way of protecting login, though, so I decided to spend some time to compare the two approaches.
 
 ## Password managers do their best
 
@@ -17,13 +19,13 @@ Below is an exhaustive list of the security properties of a website that the bro
 
 And...that's pretty much it.
 
-Now, let's imagine a password manager has a very strong, unique password stored for the URL the user is currently viewing. The password manager jumps in to autofill the user's credentials if it looks like the URL resembles any entries' "website" fields, and this seems to give the impression that the password can only be autofilled on its matching site.
+With this in mind, let's imagine a password manager has a very strong, unique password stored for the URL the user is currently viewing. The password manager jumps in to autofill the user's credentials if it looks like the URL resembles any entries' "website" fields, and this seems to give the impression that the password can only be autofilled on its matching site.
 
-However, while password managers often try discourage the user from autofilling credentials for a site if the selected entry doesn't match the URL, the user can ultimately force their way through the autofill warning to potentially disastrous results. And even if autofill doesn't work, particularly stubborn users who "just want to get to the website" can manually copy-paste in their strong, unique password. Either way users are still highly susceptible to getting phished.
+Password managers try to discourage users from autofilling credentials for a site if the selected entry doesn't match the current site's URL. However the user can ultimately force their way through the autofill warning to fill in their login info anyway. And even when autofill can't work, particularly stubborn users who "just want to get to the website" can manually copy-paste in their strong, unique password. Either way users are still highly susceptible to getting phished.
 
-## Phishing strong, unique passwords
+## How to phish strong, unique passwords
 
-For example, let's imagine that I have a credential saved for a website "**crunchyroll1234.com**":
+Imagine that I have a credential saved for a website "**crunchyroll1234.com**":
 
 ![My totally legit username and password for the non-existent website crunchyroll1234.com](images/crunchyroll1234.png)
 
@@ -37,7 +39,7 @@ That's pretty messed up!
 
 ## It's the phishing resistance, duh!
 
-Passkeys are such a stronger authentication mechanism because **the browser and authenticator are active participants in the ceremony**.
+Passkeys are such a stronger authentication mechanism because **the browser and authenticator are active participants in the ceremony.**
 
 When users register or log in with a passkey, the **browser** is in charge of the following:
 
@@ -56,7 +58,9 @@ The **authenticator**, meanwhile, has its own active role in all of this:
 
 To summarize a bit here, **the browser makes sure the RP ID is valid for the current URL, and the authenticator only allows use of passkeys that match the validated RP ID.**
 
-These are active protections that enlist the help of tools the user has consented to use (the browser and authenticator) to keep the user safe. Together this nearly eliminates an attacker's ability to induce a potential victim to share their credentials, aka "phishing", via a website that looks like a legitimate website at an illegitimate URL. This is a proven way of eliminating phishing from authentication, and no amount of management of strong, unique passwords will ever be as effective.
+These are active protections that enlist the help of tools the user has consented to use (the browser and authenticator) to keep the user safe. Together this nearly eliminates an attacker's ability to induce a potential victim to share their credentials, aka "phishing", via a website that looks like a legitimate website at an illegitimate URL.
+
+This combination of checks is a proven way of eliminating phishing from authentication, and no amount of management of strong, unique passwords will ever be as effective.
 
 ## Passkeys are better than ever
 
