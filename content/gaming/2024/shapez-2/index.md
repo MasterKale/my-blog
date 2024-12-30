@@ -1,9 +1,9 @@
 +++
-title = "{{ getenv "TITLE" }}"
-date = "{{ now.UTC.Format "2006-01-02T15:04:05.000Z" }}"
+title = "Shapez 2"
+date = "2024-12-30T02:25:25.220Z"
 description = ""
-gaming = {{ now.UTC.Format "2006" }}
-system = "PS5|PC|Switch"
+gaming = 2024
+system = "PC"
 completed = false
 
 [[resources]]

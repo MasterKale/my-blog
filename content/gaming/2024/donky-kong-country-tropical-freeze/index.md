@@ -1,9 +1,9 @@
 +++
-title = "{{ getenv "TITLE" }}"
-date = "{{ now.UTC.Format "2006-01-02T15:04:05.000Z" }}"
+title = "Donky Kong Country Tropical Freeze"
+date = "2024-12-30T02:24:27.564Z"
 description = ""
-gaming = {{ now.UTC.Format "2006" }}
-system = "PS5|PC|Switch"
+gaming = 2024
+system = "Switch"
 completed = false
 
 [[resources]]

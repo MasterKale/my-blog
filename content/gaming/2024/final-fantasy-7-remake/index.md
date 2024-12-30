@@ -1,10 +1,10 @@
 +++
-title = "{{ getenv "TITLE" }}"
-date = "{{ now.UTC.Format "2006-01-02T15:04:05.000Z" }}"
+title = "Final Fantasy 7 Remake"
+date = "2024-12-30T02:23:01.967Z"
 description = ""
-gaming = {{ now.UTC.Format "2006" }}
-system = "PS5|PC|Switch"
-completed = false
+gaming = 2024
+system = "PS5"
+completed = true
 
 [[resources]]
 src = "images/boxart.jpg"
