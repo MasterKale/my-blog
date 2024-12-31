@@ -4,7 +4,7 @@ date = "2024-12-30T02:22:25.429Z"
 description = ""
 gaming = 2024
 system = "PS5"
-completed = false
+completed = true
 
 [[resources]]
 src = "images/boxart.jpg"
