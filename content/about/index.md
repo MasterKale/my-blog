@@ -17,7 +17,7 @@ When I'm not [blogging](/) or [working on open-source](https://github.com/Master
 - **Email:** matthew@millerti.me
 - **GitHub:** [MasterKale](https://github.com/MasterKale)
 - **Mastodon:** <a rel="me" href="https://infosec.exchange/@iamkale">@iamkale@infosec.exchange</a>
-- **Bluesky:** [@millerti.me](https://bsky.app/profile/millerti.me)
+- **Bluesky:** [@iamkale.millerti.me](https://bsky.app/profile/iamkale.millerti.me)
 - **LinkedIn:** [iammatthewmiller](https://www.linkedin.com/in/iammatthewmiller/)
 
 ## "Matt's Headroom"?
