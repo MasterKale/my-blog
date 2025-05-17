@@ -7,6 +7,22 @@ keywords = ["webauthn", "encryption"]
 hasCode = true
 +++
 
+**Edit (May 2025):** Hello from 2025! This article continues to see a decent amount of traffic, especially as more people find out about PRF and want to learn more. However, I strongly encourage you to consider the following:
+
+🚨🚨🚨
+
+**If you delete a passkey you will permanently lose access to all of its PRF-protected data!**
+
+🚨🚨🚨
+
+In such a scenario there is no way to recover PRF-protected data. It's gone. Kaput!
+
+There are legitimate use cases for PRF. But before you go off and implement some whiz-bang PRF-powered encryption system for your website, please keep in mind that **your users risk losing all of their encrypted if they ever delete (or even recreate) a passkey for your site**. As the website owner you will naturally bear the brunt of their ire...unless you architected your use of PRF in a way that allows for "recovery" (of data, of account access, etc...) in the case of passkey loss 😉
+
+With this in mind, please enjoy the rest of the post from its debut in early 2023:
+
+----
+
 When I discovered WebAuthn three years ago a quirky idea came to me: "what if you could **also** protect data with a security key?" The idea of a physical authenticator being used to encrypt and decrypt information stuck with me, even after I came to understand that WebAuthn couldn't be used in that way.
 
 Fast forward to 2023. The recent addition of [the `prf` extension to the WebAuthn L3 Draft spec](https://w3c.github.io/webauthn/#prf-extension) is introducing functionality to WebAuthn that makes my crazy idea possible! Imagine it: a quick tap to encrypt a super secret message, a short journey via [sneakernet](https://en.wikipedia.org/wiki/Sneakernet), then a quick tap to decrypt the message...
