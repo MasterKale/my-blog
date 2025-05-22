@@ -17,9 +17,9 @@ hasCode = true
 
 In such a scenario there is no way to recover PRF-protected data. It's gone. Kaput!
 
-There are legitimate use cases for PRF. But before you go off and implement some whiz-bang PRF-powered encryption system for your website, please keep in mind that **your users risk losing all of their encrypted if they ever delete (or even recreate) a passkey for your site**. As the website owner you will naturally bear the brunt of their ire...unless you architected your use of PRF in a way that allows for "recovery" (of data, of account access, etc...) in the case of passkey loss 😉
+There are legitimate use cases for PRF. But before you go off and implement some whiz-bang PRF-powered encryption system for your website, please keep in mind that **your users risk losing all of their encrypted data if they ever delete (or even recreate) a passkey for your site**. As the website owner you will naturally bear the brunt of their ire...unless you architected your use of PRF in a way that allows for "recovery" (of data, of account access, etc...) in the case of passkey loss 😉
 
-With this in mind, please enjoy the rest of the post from its debut in early 2023:
+With this in mind, please enjoy the rest of the post from early 2023:
 
 ----
 
