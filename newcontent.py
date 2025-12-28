@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import argparse
+import re
 from datetime import date
 
 """
@@ -37,8 +38,16 @@ args = parser.parse_args()
 """
 Construct a filename from the title
 """
-# Join all of the words together with dashes in between
-folder_name = "-".join(args.title).lower()
+# Slugify the title
+# Join words and convert to lowercase
+folder_name = ' '.join(args.title).lower()
+# Omit non-alphanumeric characters (except spaces)
+folder_name = re.sub(r'[^a-z0-9\s-]', '', folder_name)
+# Replace multiple spaces/dashes with single dashes
+folder_name = re.sub(r'[\s-]+', '-', folder_name)
+# Remove leading/trailing dashes
+folder_name = folder_name.strip('-')
+
 # Use spaces for the actual post title
 title = ' '.join(args.title)
 
