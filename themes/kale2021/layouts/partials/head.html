@@ -48,6 +48,11 @@
   {{ end }}
   <!-- Page title -->
   {{ $title := print .Site.Title " | " .Title }}
+  <!-- Custom title for gaming year pages -->
+  {{ if and (eq .Section "gaming") (findRE "^\\d{4}$" .Title) }}
+    {{ $title = print .Site.Title " | Games I Played in " .Title }}
+  {{ end }}
+  <!-- Display the site title on the homepage -->
   {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
   <title>{{ $title }}</title>
 </head>
