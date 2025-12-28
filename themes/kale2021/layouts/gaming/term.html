@@ -1,5 +1,7 @@
 {{ define "main" }}
-  <h2><a href="/gaming/">Games I Played</a> &gt; {{ .Title }}</h2>
+  <!-- Take "/gaming/2025/" and get "2025" -->
+  {{ $year := index (findRE `\d{4}` .Page.RelPermalink) 0 }}
+  <h2><a href="/gaming/">Games I Played</a> &gt; {{ $year }}</h2>
   <p>
     <em>Games are sorted from most to least recently played.</em>
   </p>
