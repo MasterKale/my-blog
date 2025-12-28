@@ -246,6 +246,12 @@ img.preview-portrait {
   width: auto;
 }
 
+.gaming-list-item-status {
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+}
+
 .gaming-single-meta li.system { list-style: "🎮 "; }
 .gaming-single-meta li.completed { list-style: "✅ "; }
 
