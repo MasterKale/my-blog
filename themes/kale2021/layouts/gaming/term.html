@@ -5,17 +5,7 @@
   </p>
   <ol reversed>
     {{ range .Pages.ByPublishDate.Reverse }}
-      {{ $wordcount := print .Content | countwords }}
-      <li>
-      {{ if gt $wordcount 0 }}
-        <a href="{{ .RelPermalink }}" class="title">
-          {{ .Title }}
-        </a>
-      {{ else }}
-        {{ .Title }}
-      {{ end }}
-        {{ partial "metadata-gaming.html" . }}
-      </li>
+      <li>{{ partial "list-item-gaming.html" . }}</li>
     {{ end }}
   </ol>
 {{ end }}

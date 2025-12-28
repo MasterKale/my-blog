@@ -1,0 +1,17 @@
+<!-- An icon indicating game completion -->
+{{ if .Params.Completed }}
+  <span title="Rolled Credits">✅</span>
+{{ else }}
+  <span title="Uncompleted">⏏️</span>
+{{ end }}
+
+<!-- The name of the game, and a link to its review if present -->
+{{ $wordcount := print .Content | countwords }}
+{{ if gt $wordcount 0 }}
+  <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
+{{ else }}
+  {{ .Title }}
+{{ end }}
+
+<!-- Which system the game was played on -->
+({{ .Params.System | safeHTML }})

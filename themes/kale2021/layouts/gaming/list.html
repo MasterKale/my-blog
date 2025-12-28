@@ -6,21 +6,10 @@
   {{ range sort .Site.Taxonomies.gaming.Alphabetical.Reverse }}
   <h3>
     <a href="{{ .Page.Permalink }}" class="category--title">{{ .Page.Title }}</a>
-    <span class="category--count">({{ .Count }})</span>
   </h3>
     <ol reversed>
       {{ range sort .Pages.ByPublishDate.Reverse }}
-        {{ $wordcount := print .Content | countwords }}
-        <li>
-        {{ if gt $wordcount 0 }}
-          <a href="{{ .RelPermalink }}" class="title">
-            {{ .Title }}
-          </a>
-        {{ else }}
-          {{ .Title }}
-        {{ end }}
-          {{ partial "metadata-gaming.html" . }}
-        </li>
+      <li>{{ partial "list-item-gaming.html" . }}</li>
       {{ end }}
     </ol>
   {{end }}
